@@ -1,0 +1,17 @@
+site_name: Eli Array Minkoff's Tech Docs
+
+plugins:
+  - search
+  - macros
+
+markdown_extensions:
+  - callouts
+  - pymdownx.betterem
+  - pymdownx.tilde
+  - pymdownx.tasklist
+  - pymdownx.superfences
+  - pymdownx.saneheaders
+
+extra:
+  j2_template_note:
+    '>? NOTE: This page contains `{{ jinja2_style_variable_syntax }}` in example commands or configs. Replace them with the appropriate values when using the code or values in question.'
