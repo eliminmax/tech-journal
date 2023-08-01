@@ -36,7 +36,7 @@ replace the old hostname in `/etc/hosts` and `/etc/hostname`.
 
 0. Run `ip link show`, and note the interface you are going to change. (In my case, it's **ens192**).
 
-1. Edit the file `/etc/sysconfig/network-scripts/ifcfg-{{ IFNAME }}` to edit or add the following values (replacing `{{ jinja2_style_placeholders }}` as needed):
+1. Edit the file `/etc/sysconfig/network-scripts/ifcfg-{{ IFNAME }}` to edit or add the following values:
 
 ```;
 BOOTPROTO=none
