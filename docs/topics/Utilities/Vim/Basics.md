@@ -10,23 +10,24 @@
 
 ## Command mode navigation
 
-| key | effect |
-|-|-|
-| `h`, `left arrow` | move cursor left |
-| `j`, `up arrow` | move cursor up |
-| `k`, `down arrow` | move cursor down |
+| key                | effect            |
+|--------------------|-------------------|
+| `h`, `left arrow`  | move cursor left  |
+| `j`, `up arrow`    | move cursor up    |
+| `k`, `down arrow`  | move cursor down  |
 | `l`, `right arrow` | move cursor right |
 
 ## Useful ex mode commands
-| command | effect |
-|-|-|
-|`q`| quit vi |
-|`w`| 'write out' / save |
-|`wq`, `x`| save and quit |
-|`q!`| quit without saving |
-|`r <file>`| read in **file** |
-|`w <file>`| write to **file** |
-|`w! <file>`| overwrite **file** |
+
+| command     | effect              |
+|-------------|---------------------|
+| `q`         | quit vi             |
+| `w`         | 'write out' / save  |
+| `wq`, `x`   | save and quit       |
+| `q!`        | quit without saving |
+| `r <file>`  | read in **file**    |
+| `w <file>`  | write to **file**   |
+| `w! <file>` | overwrite **file**  |
 
 ***
 

@@ -1,6 +1,6 @@
 # Useful PowerShell Snippets
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Windows Exclusive](#windows-exclusive)
   * [Check IP Addresses](#check-ip-addresses)
@@ -33,6 +33,7 @@ Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 ## Filter objects
 
 example: get the ID and Name of all processes that have been running since before midnight on 19 Jan. 2023
+
 ```powershell
 Get-Process | Where-Object {$_.StartTime -lt (Get-Date '2023-01-29 00:00')} | Select-Object Id,Name
 ```

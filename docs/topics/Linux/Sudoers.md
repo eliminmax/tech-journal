@@ -4,11 +4,11 @@ The rules for which users/groups can use sudo are typically defined in the file 
 
 ## Default Sudoer Groups:
 
-Distro/s|Group Name
--|-
-**Red Hat Enterprise Linux**, **CentOS**, **Fedora**, and their derivatives|**wheel**
-**Debian**, **Ubuntu**, and their derivatives|**sudo**
-**Ubuntu** (11.10 and earlier)|**admin**
+| Distro/s                                                                    | Group Name |
+|-----------------------------------------------------------------------------|------------|
+| **Red Hat Enterprise Linux**, **CentOS**, **Fedora**, and their derivatives | `wheel`  |
+| **Debian**, **Ubuntu**, and their derivatives                               | `sudo`   |
+| **Ubuntu** (11.10 and earlier)                                              | `admin`  |
 
 **WARNING:** You should **never** edit **/etc/sudoers** directly - use the `visudo` command. (This will ensure that if your changes have any errors, they will be caught and reverted.)
 

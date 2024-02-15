@@ -1,6 +1,6 @@
 # Ansible: Installation Methods
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Install Ansible with System Package Manager](#install-ansible-with-system-package-manager)
   * [Red Hat Family](#red-hat-family)
@@ -129,10 +129,15 @@ sudo chmod +x /usr/local/sbin/spipx
 
 Additionally, the PATH variable must include the /opt/pipx/bin directory. One way to make sure that that is the case is to run the following:
 
-```
+```sh
 sudo dd of=/etc/profile.d/spipx_path.local.sh <<EOF
 PATH="\$PATH\${PATH+:}/opt/pipx/bin"
 EOF
 . /etc/profile.d/spipx_path.local.sh
+```
+
+Finally, run the command
+
+```sh
 sudo spipx install ansible --include-deps
 ```

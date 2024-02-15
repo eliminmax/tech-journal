@@ -9,15 +9,15 @@ I have, on occasion, wanted to change the username of a pre-configured account o
 You must have the ability to run commands with `root`-level permissions without logging in as the user you want to rename. See the end of this document for a method if you want to rename your only admin user
 
 Ensure that the user you want to rename has no currently-running processes. The following command lists running processes for the user, and should not have any output:
-
+{% raw %}
 ```sh
 ps -u {{ old_username }} --no-headers
 ```
-
+{% endraw %}
 ## Renaming the User
 
 Run the following commands to rename the user, the user's home directory, and the user's primary group, which is typically named after that user.
-
+{% raw %}
 ```sh
 # Rename the user itself
 usermod -l {{ new_username }} {{ old_username }}
@@ -26,7 +26,7 @@ usermod -d /home/{{ new_username }} -m {{ new_username }}
 # Rename the user's primary group
 groupmod -n {{ new_username }} {{ old_username }}
 ```
-
+{% endraw %}
 ---
 
 **References**
@@ -34,4 +34,3 @@ groupmod -n {{ new_username }} {{ old_username }}
 * [Linux userdel command and examples | Computer Hope](https://www.computerhope.com/unix/userdel.htm)
 * [How to rename user in Linux (also rename group & home directory) | LinuxTechLab](https://linuxtechlab.com/rename-user-in-linux-rename-home-directory/)
 * [How To Find Currently Logged In Users In Linux | OSTechNix](https://ostechnix.com/how-to-find-currently-logged-in-users-in-linux/)
-<!--- vim: set ft=markdown.jinja :-->

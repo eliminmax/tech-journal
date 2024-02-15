@@ -1,6 +1,6 @@
 # Password Guessing and Cracking - Tools and techniques
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Password Guessing](#password-guessing)
   * [CeWL](#cewl)
@@ -24,6 +24,7 @@
 The Custom Word List generator can be used to generate wordlists based on the contents of target websites. It parses a webpage and any pages it links to, up to a given depth.
 
 Example usage from [Kali docs](https://www.kali.org/tools/cewl/)
+
 ```bash
 cewl -d 2 -m 5 -w docswords.txt https://example.com
 ```

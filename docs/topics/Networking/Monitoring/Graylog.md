@@ -1,5 +1,21 @@
 # Install and configure Graylog
 
+<!-- vim-markdown-toc GitLab -->
+
+  * [RHEL 7/8, CentOS 7, AlmaLinux 8, Rocky Linux 8, etc.](#rhel-78-centos-7-almalinux-8-rocky-linux-8-etc)
+    * [Manual Approach](#manual-approach)
+      * [Step 1 - Install Software](#step-1-install-software)
+      * [Step 2 - Configure and Start Services](#step-2-configure-and-start-services)
+      * [Step 3 - Firewall and SELinux Stuff](#step-3-firewall-and-selinux-stuff)
+    * [Automated approach to Steps 1, 2, and 3](#automated-approach-to-steps-1-2-and-3)
+      * [Step 4 - Rsyslog Replacement](#step-4-rsyslog-replacement)
+      * [Step 5 - change rsyslog client settings](#step-5-change-rsyslog-client-settings)
+* [Send Windows EventLogs to Graylog with Sidecar and Winlogbeat](#send-windows-eventlogs-to-graylog-with-sidecar-and-winlogbeat)
+
+<!-- vim-markdown-toc -->
+
+{{ j2_template_note }}
+
 ## RHEL 7/8, CentOS 7, AlmaLinux 8, Rocky Linux 8, etc.
 
 *Installation instructions adapted from [Graylog CentOS Installation](https://docs.graylog.org/docs/centos) and [Graylog server.conf documentation](https://docs.graylog.org/docs/server-conf)*
@@ -9,6 +25,7 @@
 #### Step 1 - Install Software
 
 As root/with `sudo`, run the following:
+
 ```sh
 # install openjdk
 yum install -y java-11-openjdk-headless
@@ -62,8 +79,8 @@ yum install -y graylog-server graylog-{enterprise,integrations,enterprise-integr
 
 #### Step 2 - Configure and Start Services
 
-As root/with `sudo`, run the following, replacing `<PLACEHOLDER_TEXT>` with appropriate values:
-
+As root/with `sudo`, run the following:
+{% raw %}
 ```sh
 # Configure elasticsearch
 cat >>/etc/elasticsearch/elasticsearch.yml <<EOF
@@ -73,13 +90,13 @@ EOF
 
 # Configure graylog
 # set admin password
-sed -i "s/root_password_sha2.*$/root_password_sha2 = <ADMIN_PASSWORD>/g" /etc/graylog/server/server.conf
+sed -i "s/root_password_sha2.*$/root_password_sha2 = {{ ADMIN_PASSWORD }}/g" /etc/graylog/server/server.conf
 
 # set password_secret
 sed -i "s/password_secret.*$/password_secret = $(pwgen -N 1 -s 96 | tr -d '\n')/g" /etc/graylog/server/server.conf
 
 # set bind address (format: 198.0.2.176:9000 or for.example:8080)
-sed -i "s/#http_bind_addresss.*$/http_bind_addresss = <HTTP_BIND>/g"
+sed -i "s/#http_bind_addresss.*$/http_bind_addresss = {{ HTTP_BIND }}/g"
 
 # Reload SystemD Daemons
 systemctl daemon-reload
@@ -101,8 +118,7 @@ systemctl enable --now graylog-server
 
 # verify graylog is running
 systemctl --type service --state active | grep graylog
-
-```
+```{% endraw %}
 
 #### Step 3 - Firewall and SELinux Stuff
 
@@ -135,15 +151,17 @@ sudo ./graylog-deploy-el.sh
 #### Step 4 - Rsyslog Replacement
 
 Open up the web interface, and log in with the username `admin` and the password set in step 2.
-
-Navigate to the **System > Inputs** menu, and, in the **Select Input** Syslog UDP (the last option). Configure the options you want, and make sure that the port you select is not already in use (e.g. by the `rsyslog` service). Also, make sure to add the port you select through the firewall (`sudo firewall-cmd --permanent --add-port=<port>/udp && sudo firewall-cmd --reload`) (I forgot to do the latter when setting this up for a class lab.)
+{% raw %}
+Navigate to the **System > Inputs** menu, and, in the **Select Input** Syslog UDP (the last option). Configure the options you want, and make sure that the port you select is not already in use (e.g. by the `rsyslog` service). Also, make sure to add the port you select through the firewall (`sudo firewall-cmd --permanent --add-port={{ port }}/udp && sudo firewall-cmd --reload`) (I forgot to do the latter when setting this up for a class lab.){% endraw %}
 
 #### Step 5 - change rsyslog client settings
 
 On the rsyslog client - that is, the server which sends its log messages to Graylog, add or change the rules to point to the address and port configured in Step 4, then restart the rsyslog service.
 
-**Example - modify the Log Client set up in [Linux: Save Logs Remotely](/topics/Linux/Save-Logs-Remotely#setup-on-log-client)**
+**Example - modify the Log Client set up in [Linux: Save Logs Remotely](../../Linux/Save-Logs-Remotely.md#setup-on-log-client)**
+
 Assuming the rsyslog input is running on port 1514, edit /etc/rsyslog.d/send-to-log-server.conf, so that it reads as follows:
+
 ```
 user.notice @10.0.4.12:1514
 ```
@@ -157,11 +175,12 @@ user.notice @10.0.4.12:1514
 2. On the Windows system, download and install Graylog Sidecar, Download the latest Graylog Sidecar installer from [GitHub releases](https://github.com/Graylog2/collector-sidecar/releases/latest) to its own directory - e.g. `C:\Program Files\Graylog\Sidecar`
 
 3. At the command line, run the following:
+{% raw %}
 ```
-.\graylog_installer_X.Y.Z-a.exe /S -SERVERURL=http://<logserver:port>/api -APITOKEN=<the-aforementioned-token>
+.\graylog_installer_X.Y.Z-a.exe /S -SERVERURL=http://{{ logserver }} :{{ port }}/api -APITOKEN={{ the_aforementioned_token }}
 .\graylog_installer_X.Y.Z-a.exe -service install
 .\graylog_installer_X.Y.Z-a.exe -service start
-```
+```{% endraw %}
 
 **At this point, Graylog should detect the sidecar. If it doesn't, fix that before moving on**
 

@@ -1,6 +1,8 @@
 # Linux: VyOS Router and Firewall
 
-<!-- vim-markdown-toc GFM -->
+{{ j2_template_note }}
+
+<!-- vim-markdown-toc GitLab -->
 
 * [Configuration](#configuration)
   * [Entering Configuration Mode](#entering-configuration-mode)
@@ -17,7 +19,7 @@
     * [Define zones for interfaces](#define-zones-for-interfaces)
     * [Define Firewalls](#define-firewalls)
   * [Router Information Protocol (RIP)](#router-information-protocol-rip)
-  * [Export/Import Configuration](#exportimport-configuration)
+  * [Export/Import Configuration](#export-import-configuration)
   * [Port Forwarding](#port-forwarding)
 
 <!-- vim-markdown-toc -->

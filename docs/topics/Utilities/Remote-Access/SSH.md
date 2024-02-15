@@ -1,17 +1,21 @@
 # SSH
 
-> <details>
-> <summary>Contents</summary>
-> <a href="#security">Security</a><br>
-> * <a href="#block-root-login">Block Root Login</a><br>
-> * <a href="#set-up-key-based-authentication">Set Up Key-based Authentication</a><br>
-> * * <a href="#with-openssh-client">With OpenSSH Client</a><br>
-> * * <a href="#with-putty">With PuTTY</a><br>
-> * <a href="#how-to-use-ssh-agent">How to use SSH-Agent</a><br>
-> <a href="#scp">SCP</a><br>
-> * <a href="#copy-files-tofrom-machines-with-scp">Copy files to/from machines with SCP</a><br>
-> * <a href="#edit-remote-files-with-vim">Edit remote files with Vim</a><br>
-> </details>
+<!-- vim-markdown-toc GitLab -->
+
+* [Security](#security)
+  * [Block Root Login](#block-root-login)
+  * [Set Up Key-based Authentication](#set-up-key-based-authentication)
+    * [With OpenSSH Client](#with-openssh-client)
+    * [With PuTTY](#with-putty)
+  * [How to use SSH-Agent](#how-to-use-ssh-agent)
+* [SCP](#scp)
+  * [Copy files to/from machines with SCP](#copy-files-to-from-machines-with-scp)
+  * [Dealing with known_hosts file](#dealing-with-known_hosts-file)
+    * [Option 1: Delete the offending line](#option-1-delete-the-offending-line)
+    * [Option 2: Empty or delete the known_hosts file](#option-2-empty-or-delete-the-known_hosts-file)
+  * [Edit remote files with Vim](#edit-remote-files-with-vim)
+
+<!-- vim-markdown-toc -->
 
 This is a page documenting the use of **OpenSSH**, the *de facto* standard system for remote access to Linux/Unix servers.
 

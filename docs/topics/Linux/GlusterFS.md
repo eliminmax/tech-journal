@@ -1,6 +1,6 @@
 # GlusterFS
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Setup](#setup)
   * [Installation](#installation)
@@ -13,19 +13,21 @@ GlusterFS is a distributed filesystem, which allows you to split a volume across
 
 ## Setup
 
-For the sake of this example, I'm going to explain how to re-create my setup from my [Redundancy/High Availability project](/topics/Working-Notes/SEC440/High-Availability-Project). That means I'm working with 3 nodes, all running Ubuntu 22.04, They are as follows:
+For the sake of this example, I'm going to explain how to re-create my setup from my [Redundancy/High Availability project](https://github.com/eliminmax/cncs-journal/wiki/Working-Notes%3A-SEC440%3A-Redundant-Infrastructure). That means I'm working with 3 nodes, all running Ubuntu 22.04, They are as follows:
 
-hostname | ip address
----------|------------
-u1-eli   | 10.0.6.21
-u2-eli   | 10.0.6.22
-u3-eli   | 10.0.6.23
+| hostname | ip address  |
+|----------|-------------|
+| `u1-eli` | `10.0.6.21` |
+| `u2-eli` | `10.0.6.22` |
+| `u3-eli` | `10.0.6.23` |
 
 ### Installation
 
 You'll need to install the GlusterFS server software on all of the nodes, and enable and start the `glusterd` service.
 
 For example, on Debian or Ubuntu:
+
+
 ```sh
 apt install glusterfs-server
 systemctl enable --now glusterd

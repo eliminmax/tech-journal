@@ -1,6 +1,4 @@
-# Configuring the Server using the Server Manager App:
-
-## Setting the IP and Hostname
+# Configuring the Server using the Server Manager App
 
 0. Open the **Server Manager** app. On the sidebar, click **Local Server**.
 

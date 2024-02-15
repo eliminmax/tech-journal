@@ -2,19 +2,19 @@
 
 {{ j2_template_note }}
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Note](#note)
 * [Installation and Setup](#installation-and-setup)
 * [The SQL language](#the-sql-language)
-    * [Create a User](#create-a-user)
-    * [Create a Database](#create-a-database)
-    * [Privilege Management](#privilege-management)
+  * [Create a User](#create-a-user)
+  * [Create a Database](#create-a-database)
+  * [Privilege Management](#privilege-management)
 * [Galera Clustering](#galera-clustering)
-    * [Setup](#setup)
-        * [Installation:](#installation)
-        * [Configuration](#configuration)
-        * [Bootstrap](#bootstrap)
+  * [Setup](#setup)
+    * [Installation:](#installation)
+    * [Configuration](#configuration)
+    * [Bootstrap](#bootstrap)
 
 <!-- vim-markdown-toc -->
 
@@ -80,12 +80,12 @@ In larger-scale environments, it is common (and good practice) to run a dedicate
 #### Configuration
 
 In the MySQL configuration file/s, add a section with the following template:
-
+{% raw %}
 ```conf
 [galera]
 wsrep_on=ON
 wsrep_provider=/usr/lib/galera/libgalera_smm.so
-wsrep_cluster_address="gcomm://{% raw %}{{ galera.cluster_addresses }}"
+wsrep_cluster_address="gcomm://{{ galera.cluster_addresses }}"
 binlog_format=row
 default_storage_engine=InnoDB
 innodb_autoinc_lock_mode=2
@@ -93,7 +93,7 @@ bind-address=0.0.0.0
 wsrep_cluster_name="{{ galera.cluster_name }}"
 wsrep_cluster_name="{{ host.ip_address }}"
 ```
-{% endraw %}docs/topics/Networking/Infrastructure/Databases/MySQL-and-MariaDB.md
+{% endraw %}
 The `galera` configuration options should be the same for all nodes in the cluster, but the `host` settings should be per-host.
 
 #### Bootstrap

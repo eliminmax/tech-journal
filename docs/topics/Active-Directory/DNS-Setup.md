@@ -32,7 +32,7 @@
 
 5. On the device you want to add, change the DNS Server to the IP address of the server you've been working on.
 
-   > **Note:** everything beyond this point assumes that you have at least one domain admin on the network. If you don't, before you continue, follow the instructions below to add a user, and add it to the group "Domain Admins"
+> **Note:** everything beyond this point assumes that you have at least one domain admin on the network. If you don't, before you continue, follow the instructions below to add a user, and add it to the group "Domain Admins"
 
 6. On the device you want to add, open **Control Panel**, and navigate to *Control Panel\System and Security\System*, and open System Properties. 
 

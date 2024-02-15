@@ -1,6 +1,6 @@
 # APT Repository Management
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Notes on Terminology](#notes-on-terminology)
 * [Adding repositories](#adding-repositories)
@@ -138,9 +138,11 @@ curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 ```
 
 I do not recommend running that command - instead, what I'd run is the following:
+
 ```sh
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor --output /etc/apt/keyrings/microsoft-apt-repo.gpg
 ```
+
 Change the URL and `--output` path as appropriate. If the URL ends with "`.gpg`", you don't need to `--dearmor` it, and should instead just delete `| gpg --dearmor `, to pass the `--output` argument straight to `curl`.
 
 ##### Creating the Repository Configuration File
@@ -175,7 +177,7 @@ The appropriate values can be determined as followed:
 
 ##### Example: Installing PowerShell on Debian Bullseye
 
-Adapted from [Powershell: Installation § Debian 11 (Bullseye)](/topics/Powershell/Installation#debian-11-bullseye)
+Adapted from [Powershell: Installation § Debian 11 (Bullseye)](../../Powershell/Installation.md#debian-11-bullseye)
 
 ```sh
 # ensure that curl and gpg commands are installed

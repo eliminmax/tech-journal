@@ -1,6 +1,6 @@
 # Active Directory Administration via Powershell
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Install and Configure Domain Controller and DNS Server](#install-and-configure-domain-controller-and-dns-server)
   * [Set up AD DS Forest](#set-up-ad-ds-forest)

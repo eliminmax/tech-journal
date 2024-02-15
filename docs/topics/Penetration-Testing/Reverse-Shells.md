@@ -1,6 +1,6 @@
 # Reverse Shells
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Reverse Shells](#reverse-shells)
   * [Simple Socket Reverse Shells](#simple-socket-reverse-shells)

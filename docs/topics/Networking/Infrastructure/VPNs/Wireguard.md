@@ -2,7 +2,7 @@
 
 Wireguard is a VPN protocol that was originally made for Linux, and it has support built into the Linux kernel.
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Linux Configuration](#linux-configuration)
   * [Dependencies](#dependencies)
@@ -118,6 +118,7 @@ For this example, we'll allow connections from a Windows 10 device called `remot
 #### On `fw`:
 
 0. **Config mode:** run the following
+
 ```
 set interfaces wireguard wg0 address '10.10.10.1/24'
 set interfaces wireguard wg0 peer ctrl allowed-ips '10.10.10.10/32'
@@ -125,6 +126,7 @@ set interfaces wireguard wg0 peer ctrl public-key 'cYPncKxxCovLYXrvdFoUJL/y2AK7F
 set interfaces wireguard wg0 port '54321'
 run generate pki wireguard key-pair install interface wg0
 ```
+
 1. Save the public key (for this example, let's say it's `bHit6VZXq8D+xwgaFMQiWGWqNDXPLnZRdqfwV1H44Ro=`)
 
 #### Back to `remote`:
@@ -141,4 +143,5 @@ PublicKey = bHit6VZXq8D+xwgaFMQiWGWqNDXPLnZRdqfwV1H44Ro=
 AllowedIPs = 10.10.10.1/32, 10.10.20.0/24
 Endpoint = 10.10.10.1:54321
 ```
+
 2. Click the button to activate the tunnel - it should be ready to go now

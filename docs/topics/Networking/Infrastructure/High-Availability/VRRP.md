@@ -1,6 +1,6 @@
 # VRRP
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [VyOS](#vyos)
 * [keepalived](#keepalived)

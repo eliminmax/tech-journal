@@ -1,6 +1,6 @@
 # Ansible: VyOS
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Line by Line configuration](#line-by-line-configuration)
 
@@ -31,14 +31,14 @@ You can add the following to an ansible playbook
 ```
 
 By specifying the desired hostname in a variable, defined per-host, you can use one task on any number of hosts at once:
-
+{% raw %}
 ```yaml
 - name: set hostname
   vyos.vyos.vyos_config:
     lines:
-      - set system host-name {% raw %}{{ hostname }}{% endraw %}
+      - set system host-name {{ hostname }}
 ```
-
+{% endraw %}
 You can also use a configuration file template - for class, I modified [this template](https://github.com/gmcyber/480share/blob/master/config.boot.j2) made by my professor.
 
 ```yaml

@@ -2,7 +2,7 @@
 
 {{ j2_template_note }}
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Basic Usage](#basic-usage)
   * [Set up an inventory file](#set-up-an-inventory-file)
@@ -45,13 +45,13 @@ ansible_user=administator
 ### Run a command on all hosts in inventory
 {% raw %}
 ```sh
-ansible all -a <COMMAND> -i <INVENTORY_FILE>
+ansible all -a {{ COMMAND }} -i {{ INVENTORY_FILE }}
 ```
 {% endraw %}
 ### Run a module on all hosts in inventory
 {% raw %}
 ```sh
-ansible all -m <MODULE> -i <INVENTORY_FILE>
+ansible all -m {{ MODULE }} -i {{ INVENTORY_FILE }}
 ```
 {% endraw %}
 
@@ -67,9 +67,9 @@ grouped-host-0
 grouped-host-1
 ```
 Ping tagged machines:
-
-`ansible grouped-hosts -m <MODULE> -i <INVENTORY_FILE>`
-
+{% raw %}
+`ansible grouped-hosts -m {{ MODULE }} -i {{ INVENTORY_FILE }}`
+{% endraw %}
 ## Playbooks
 
 Playbooks are YAML files that define a more complex processes than running individual commands or modules.Since this is just a syntax and filetype-detection plugin there is nothing to configure, once a file has been identified as a Jinja file it will be highlighted appropriately. Any file with the extension .jinja will be recognised as a Jinja file.
@@ -96,7 +96,7 @@ Here is an example playbook, which ensures that **Apache** is up-to-date and run
 ### Running an Ansible Playbook
 {% raw %}
 ```sh
-ansible-playbook -i <INVENTORY_FILE> <PLAYBOOK_FILE>
+ansible-playbook -i {{ INVENTORY_FILE }} {{ PLAYBOOK_FILE }}
 ```
 {% endraw %}
 ### Templating

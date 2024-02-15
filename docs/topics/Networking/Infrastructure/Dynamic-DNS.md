@@ -1,26 +1,17 @@
 # Networking Infrastructure: Dynamic DNS
 
-> <details>
-> <summary>Meaning of different command prompts</summary>
-> Unix/Linux: <code>$</code>: can be run as normal user<br>
-> Unix/Linux: <code>#</code>: must be run as root (or with <code>sudo</code>)<br>
-> Windows: <code>></code>: Command Prompt or PowerShell<br>
-> Windows: <code>PS></code>: PowerShell only<br>
-> Unix/Linux and Windows: <code>$/></code>,<code>#/></code>: Works in Windows and Unix/Linux.
-> </details>
+<!-- vim-markdown-toc GitLab -->
+
+* [DuckDNS](#duckdns)
+* [YDNS (NOT RECOMMENDED)](#ydns-not-recommended)
+    * [Linux](#linux)
+    * [Windows](#windows)
+
+<!-- vim-markdown-toc -->
 
 Dynamic DNS (a.k.a. DDNS) services automatically update DNS records whenever a device's public IP changes, so that there is a consistent way to access a device which might not have a persistent public IP. There are various DDNS providers out there, both free and paid. When setting up DDNS on my RHEL EC2 instance, I found the free DDNS provider YDNS.io to be quite easy to use, but I've since switched to DuckDNS, because it sets all subdomains of the domain automatically.
 
 **Note:** I've noticed when testing this that it can take a few minutes for the update to the DNS record to propogate.
-
-<!-- vim-markdown-toc GFM -->
-
-* [DuckDNS](#duckdns)
-* [YDNS (NOT RECOMMENDED)](#ydns-not-recommended)
-    * [Linux:](#linux)
-    * [Windows:](#windows)
-
-<!-- vim-markdown-toc -->
 
 ## DuckDNS
 
@@ -40,17 +31,19 @@ Dynamic DNS (a.k.a. DDNS) services automatically update DNS records whenever a d
 
 2. On your YDNS account home, click the ***+ New Host*** button, choose a domain from the dropdown menu, and enter a name, then enter the EC2 instance public IP Address in the content field.
 
-#### Linux:
+#### Linux
 
-3. Install cURL, if necessary, then run the following: `# curl -o /root/ddns-updater.sh https://raw.githubusercontent.com/ydns/bash-updater/master/updater.sh`
+This section assumes you are logged in as root. If not, switch to root with `sudo -i`, `sudo -s`, or equivalent.
 
-5. Set the permissions to 700 for **ddns-updater.sh**: `# chmod 700 ddns-updater.sh`
+3. Install cURL, if necessary, then run the following: `curl -o /root/ddns-updater.sh https://raw.githubusercontent.com/ydns/bash-updater/master/updater.sh`
 
-6. Edit *ddns-updater<nolink>.sh*, so that the values of `$YDNS_USER` and `$YDNS_PASSWD` reflect either your login or [api credentials](https://ydns.io/user/api), and the change the `$YDNS_HOST` value to reflect the name and domain you chose in Step 2
+5. Set the permissions to 700 for **ddns-updater.sh**: `chmod 700 ddns-updater.sh`
 
-7. Edit your crontab with `# crontab -e`, and add the line `@reboot /root/ddns-updater.sh &>/dev/null`
+6. Edit *ddns-updater</nolink>.sh*, so that the values of `$YDNS_USER` and `$YDNS_PASSWD` reflect either your login or [api credentials](https://ydns.io/user/api), and the change the `$YDNS_HOST` value to reflect the name and domain you chose in Step 2
 
-#### Windows:
+7. Edit your crontab with `crontab -e`, and add the line `@reboot /root/ddns-updater.sh &>/dev/null`
+
+#### Windows
 
 3. Download and install [DDNS Updater](https://ddnsupdater.videocoding.org/download.html)
 

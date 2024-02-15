@@ -1,32 +1,38 @@
 # Linux: Create a Certificate Authority
 
-> <details>
-> <summary>Meaning of different command prompts</summary>
-> Unix/Linux: <code>$</code>: can be run as normal user<br>
-> Unix/Linux: <code>#</code>: must be run as root (or with <code>sudo</code>)<br>
-> Windows: <code>></code>: Command Prompt or PowerShell<br>
-> Windows: <code>PS></code>: PowerShell only<br>
-> Unix/Linux and Windows: <code>$/></code>,<code>#/></code>: Works in Windows and Unix/Linux.
-> </details>
+<!-- vim-markdown-toc GitLab -->
+
+* [Easy-RSA](#easy-rsa)
+  * [Rocky Linux 8](#rocky-linux-8)
+    * [Installation/Setup](#installationsetup)
+    * [Signing Certificates](#signing-certificates)
+* [Add your Certificate Authority to the system trust](#add-your-certificate-authority-to-the-system-trust)
+  * [Debian and derivatives:](#debian-and-derivatives)
+  * [RHEL and derivatives:](#rhel-and-derivatives)
+  * [Windows](#windows)
+  * [Note about Firefox](#note-about-firefox)
+
+<!-- vim-markdown-toc -->
 
 ## Easy-RSA
 
 ### Rocky Linux 8
 
 #### Installation/Setup
+
 This was adaped from [A DigitalOcean Tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-and-configure-a-certificate-authority-ca-on-centos-8)
 
-0. Install Required Software
+0. Install Required Software - must be run as root
 
-   * If needed, enable Extended Packages for Enterprise Linux: `# dnf install epel-release`
-   * Install Easy-RSA: `# dnf install easy-rsa`
+   * If needed, enable Extended Packages for Enterprise Linux: `dnf install epel-release`
+   * Install Easy-RSA: `dnf install easy-rsa`
 
 1. Set Up CA - ***DO NOT RUN AS ROOT***
 
-   * create the directory: `$ mkdir ~/easy-rsa`
+   * create the directory: `mkdir ~/easy-rsa`
    * create symbolic links to the files in /usr/share/easy-rsa/3:
-`$ ln -s /usr/share/easy-rsa/3/* ~/easy-rsa`
-   * block group/other users from accessing ~/easy-rsa: `$ chmod 700 ~/easy-rsa`
+`ln -s /usr/share/easy-rsa/3/* ~/easy-rsa`
+   * block group/other users from accessing ~/easy-rsa: `chmod 700 ~/easy-rsa`
 
 **NOTE:** Some tutorials will tell you to copy the Easy-RSA files from /usr/share/easy-rsa/3
 to ~/easy-rsa, but symlinking them allows updates to `easy-rsa` to be reflected immediately.
@@ -58,7 +64,7 @@ variable               | value
 
 3. Build the Certificate Authority
 
-   * from the easy-rsa directory, run `$ ./easyrsa build-ca`
+   * from the easy-rsa directory, run `./easyrsa build-ca`
       * this will require a password to use - if you want to set it up without a password, append `nopass` to the command
 
 4. Distribute the Public Certificate
@@ -79,7 +85,7 @@ variable               | value
 
 0. Copy the root authority to /usr/local/share/ca-certificates/
 
-1. run `# update-ca-certificates`
+1. run `update-ca-certificates` as root / with `sudo`
 
 ### RHEL and derivatives:
 
@@ -87,7 +93,7 @@ variable               | value
 
 0. Copy the root authority to /etc/pki/ca-trust/source/anchors/
 
-1. run `# update-ca-trust`
+1. run `update-ca-trust` as root / withubuntu2: 10.0.5.73 hostname= mac=00:50:56:b4:91:19restart network. `sudo`
 
 ### Windows
 

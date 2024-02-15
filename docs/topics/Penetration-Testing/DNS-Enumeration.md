@@ -32,5 +32,5 @@ for i in 192.0.2.{1..254}; do do if timeout .1 yash -c "echo >/dev/tcp/$ip/53" 2
 
 Using a specified DNS server, scan all hosts in a /24 network:
 
-* [Bash script](/eliminmax/cncs-journal/blob/master/SEC335/week3/dns-resolver.sh)
-* [Powershell script](/eliminmax/cncs-journal/blob/master/SEC335/week3/dns-resolver.ps1)
+* [Bash script](https://github.com/eliminmax/cncs-journal/blob/master/SEC335/week3/dns-resolver.sh)
+* [Powershell script](https://github.com/eliminmax/cncs-journal/blob/master/SEC335/week3/dns-resolver.ps1)

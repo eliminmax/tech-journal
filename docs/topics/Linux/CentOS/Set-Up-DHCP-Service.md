@@ -1,17 +1,8 @@
 # CentOS: Set Up DHCP Service
 
-> <details>
-> <summary>Meaning of different command prompts</summary>
-> Unix/Linux: <code>$</code>: can be run as normal user<br>
-> Unix/Linux: <code>#</code>: must be run as root (or with <code>sudo</code>)<br>
-> Windows: <code>></code>: Command Prompt or PowerShell<br>
-> Windows: <code>PS></code>: PowerShell only<br>
-> Unix/Linux and Windows: <code>$/></code>,<code>#/></code>: Works in Windows and Unix/Linux.
-> </details>
-
 To set up the DHCP service on CentOS, do the following:
 
-0. Install dhcp: `# yum install dhcp`.
+0. Install dhcp client (as root / with `sudo`): `yum install dhcp`.
 
 1. Edit the dhcp config file (**/etc/dhcp/dhcpd.conf**). Add the following, filling in the blanks. Anything in [square brackets] is optional:
 

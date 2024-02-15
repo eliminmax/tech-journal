@@ -1,8 +1,8 @@
 # Linux Setup: Hostname and Static IP
 
 {{ j2_template_note }}
-{% raw %}
-<!-- vim-markdown-toc GFM -->
+
+<!-- vim-markdown-toc GitLab -->
 
 * [Set Hostname](#set-hostname)
   * [Systemd-based distros](#systemd-based-distros)
@@ -19,9 +19,9 @@
 ## Set Hostname
 
 ### Systemd-based distros
-
+{% raw %}
 run `#!sh hostnamectl set-hostname {{ new_hostname }}`
-
+{% endraw %}
 Any currently logged-in users will need to log out and log back in to see the new hostname reflected.
 
 ### Generic method
@@ -37,8 +37,8 @@ replace the old hostname in `/etc/hosts` and `/etc/hostname`.
 0. Run `ip link show`, and note the interface you are going to change. (In my case, it's **ens192**).
 
 1. Edit the file `/etc/sysconfig/network-scripts/ifcfg-{{ IFNAME }}` to edit or add the following values:
-
-```;
+{% raw %}
+```
 BOOTPROTO=none
 ONBOOT=yes
 IPADDR={{ IP_ADDR }}
@@ -46,6 +46,7 @@ PREFIX={{ PREFIX }}
 GATEWAY={{ GATEWAY }}
 DNS1={{ DNS_IP }}
 ```
+
 * `{{ IFNAME }}`: name of the interface
 * `{{ IP_ADDR }}`: the IP address
 * `{{ PREFIX }}`: number of bits in the subnet mask
@@ -53,7 +54,7 @@ DNS1={{ DNS_IP }}
 * `{{ DNS_IP }}`: the IP address of the default gateway
 
 Additionally, to specify a Search Domain, add the line `DOMAIN={{ SEARCH_DOMAIN_0 }}`
-
+{% endraw %}
 As a more concrete example, if you were setting up a static IP of **192.0.2.131** on the network **192.0.2.0/25**, with a default gateway of **192.0.2.129**, and a DNS server at **192.0.2.130**, and the search domain **for.example**, you would want to use the following values:
 ```
 BOOTPROTO=none
@@ -64,8 +65,7 @@ GATEWAY=192.0.2.129
 DNS1=192.0.2.131
 DOMAIN=for.example
 ```
-2. Restart the network service with `systemctl ubuntu1: 10.0.5.72 hostname= mac=00:50:56:b4:c8:18
-ubuntu2: 10.0.5.73 hostname= mac=00:50:56:b4:91:19restart network`.
+2. Restart the network service with `systemctl restart network`.
 
 ### Ubuntu Netplan
 
@@ -83,7 +83,7 @@ ubuntu2: 10.0.5.73 hostname= mac=00:50:56:b4:91:19restart network`.
 3. using a text editor (e.g. `vim`, `nano`, or `gedit`), add the following to the YAML file you created, replacing `{{ jinja2_style_placeholders }}` with the appropriate values:
 
 #### FOR ETHERNET CONNECTIONS:
-
+{% raw %}
 ```yaml
 network:
   version: 2
@@ -137,7 +137,7 @@ network:
    * if you have multiple search domains or DNS servers,separate them with a comma followed by a space
 * `{{ SSID }}`: the SSID (display name) of the network
 * `{{ WPA2_PASS }}`: The WPA2 password for the network
-
+{% endraw %}
 **NOTE:** as of Ubuntu 22.04 Jammy Jellyfish, `gateway4` has been deprecated, and must be replaced with the `routes:` section. If working with an older version, either `gateway4` or a `routes:` section with a default route will work, but I'd recommend sticking with the `routes:` section, as it will make any future upgrades smoother.
 
 4. test the configuration file with `netplan try`
@@ -159,7 +159,7 @@ network:
    * you can run `nmcli con show --active` to only display active connections
 
 1. edit the active connection with the following command (replacing `{{ jinja2_style_placeholders }}` as needed)
-
+{% raw %}
 ```sh
 nmcli con mod "{{ CONNECTION }}" \
     ipv4.addresses "{{ IP_ADDRESS }}/{{ PREFIX }}" \
@@ -168,5 +168,6 @@ nmcli con mod "{{ CONNECTION }}" \
     ipv4.dns-search "{{ SEARCH_DOMAIN_0,SEARCH_DOMAIN_1... }}" \
     ipv4.method "manual"
 ```
+
 2. restart the connection: `nmcli con down {{ CONNECTION }} && nmcli con up {{ CONNECTION }}`
 {% endraw %}

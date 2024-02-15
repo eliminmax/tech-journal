@@ -1,6 +1,6 @@
 # Powershell - Module Creation
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Set up module](#set-up-module)
   * [Creating the module file](#creating-the-module-file)
@@ -67,6 +67,7 @@ Powershell will search specific directories for modules to import, so you don't 
 You can add directories in your Powershell profile, which is run at the start of every Powershell session, though I'd recommend checking that the directory is not already present first. See [Powershell: Configuration § $PROFILE](./Configuration.md#profile) for instructions on setting that up.
 
 Once set up, you can add the following to your profile, to append a directory to the `$Env:PSModulePath` variable if it is not already included. Note that I am using the Linux/macOS path separator in this.
+
 ```powershell
 function New-PSModulePathLocation ([string] $ModulePath) {
     if ( $ModulePath -in $Env.PSModulePath.Split(":")) {

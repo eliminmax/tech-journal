@@ -1,11 +1,11 @@
 # VMware PowerCLI
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Overview](#overview)
   * [Connect to Server](#connect-to-server)
   * [List VMs](#list-vms)
-  * [Start/Stop VMs](#startstop-vms)
+  * [Start/Stop VMs](#start-stop-vms)
   * [Create Snapshot](#create-snapshot)
   * [Create Linked Clone From Snapshot](#create-linked-clone-from-snapshot)
   * [Create a Virtual Network](#create-a-virtual-network)

@@ -1,6 +1,6 @@
 # Powershell Installation
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [Windows](#windows)
 * [Linux](#linux)
@@ -38,14 +38,14 @@ pwsh
 ```
 
 I have a few issues with this: the `apt-key` command is deprecated, and the `apt-transport-https` package is now an empty dummy package, and according to the
-output of `apt show apt-transport-https`, its functionality has been merged into apt itself. The reason `apt-key` is deprecated is that it trusts the gpg key to sign all packages, not just those in a particular repo. Because of that, I would do the following:
+output of `apt show apt-transport-https`, its functionality has been merged into `ap`t itself. The reason `apt-key` is deprecated is that it trusts the gpg key to sign all packages, not just those in a particular repo. Because of that, I would do the following:
 
 ```sh
 # Install system components
 sudo apt update && sudo apt install -y curl gnupg
 
 # Import the public repository GPG keys
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo dd of=/usr/share/keyrings/microsoft.gpg
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo dd of=/etc/apt/keyrings/microsoft.gpg
 
 # Register the Microsoft Product feed
 sudo dd of=/etc/apt/sources.list.d/microsoft.list <<EOF

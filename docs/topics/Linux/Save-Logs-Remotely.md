@@ -16,6 +16,7 @@ For this example, the server 10.0.4.12 is the logging server for the private net
 ### Configure rsyslog
 
 edit the configuration file:
+
 `[user@logserver01 ~]$ sudoedit /etc/rsyslog.conf`
 
 Uncomment the following lines
@@ -27,19 +28,23 @@ $UDPServerRun 514
 $ModLoad imtcp
 $InputTCPServerRun 514
 ```
+
 Restart the rsyslog service with `[user@logserver01 ~]$ sudo systemctl restart rsyslog`
 
 ## Setup on Log Client
 
 Create an additional configuration file:
+
 `[user@webserver01 ~]$ sudoedit /etc/rsyslog.d/send-to-log-server.conf`
 
 Add the following line for UDP-based connections (faster, less reliable):
+
 ```
 user.notice @10.0.4.12
 ```
 
 Add the following line for TCP-based connections (slower, more reliable):
+
 ```
 user.notice @@10.0.4.12
 ```
@@ -49,6 +54,7 @@ To send Authentication events specifically, you could instead set up the followi
 ```
 auth,authpriv.* @10.0.4.12
 ```
+
 ## Save different logs to different files
 
 Create a file in `/etc/rsyslog.d/` on the log server with the following contents to automatically save logs to subdirectories of `/var/log/remote-syslog` based on the hostname, date, and program name of the log source.

@@ -1,13 +1,25 @@
 # Intro to Git
 
-> <details>
-> <summary>Meaning of different command prompts</summary>
-> Unix/Linux: <code>$</code>: can be run as normal user<br>
-> Unix/Linux: <code>#</code>: must be run as root (or with <code>sudo</code>)<br>
-> Windows: <code>></code>: Command Prompt or PowerShell<br>
-> Windows: <code>PS></code>: PowerShell only<br>
-> Unix/Linux and Windows: <code>$/></code>,<code>#/></code>: Works in Windows and Unix/Linux.
-> </details>
+<!-- vim-markdown-toc GitLab -->
+
+* [Installing Git](#installing-git)
+  * [Debian, Ubuntu, and derivatives:](#debian-ubuntu-and-derivatives)
+  * [CentOS, RHEL, and derivatives:](#centos-rhel-and-derivatives)
+  * [Windows:](#windows)
+* [Basic Git commands](#basic-git-commands)
+  * [Clone a repository:](#clone-a-repository)
+    * [Clone via ssh:](#clone-via-ssh)
+    * [Clone via https:](#clone-via-https)
+  * [Pull changes from origin:](#pull-changes-from-origin)
+  * [Download file from origin:](#download-file-from-origin)
+  * [Add local file to repository](#add-local-file-to-repository)
+  * [Commit changes](#commit-changes)
+    * [Commit all changes](#commit-all-changes)
+    * [Commit changes to specific files:](#commit-changes-to-specific-files)
+    * [Specify commit message in command:](#specify-commit-message-in-command)
+  * [Push local changes to origin:](#push-local-changes-to-origin)
+
+<!-- vim-markdown-toc -->
 
 This page will introduce the most basic uses of the `git` version control system
 
@@ -15,15 +27,14 @@ This page will introduce the most basic uses of the `git` version control system
 
 ### Debian, Ubuntu, and derivatives:
 
-Odds are, you already have **git** installed. If not, you can install it:
 
-* On modern systems that support the `apt` command, run `# apt install -y git`
+* On modern systems that support the `apt` command, run `apt install -y git` as root.
 
-* On older systems that don't support the `apt` command, run `# apt-get install -y git`
+* On older systems that don't support the `apt` command, run `apt-get install -y git` as root.
 
 ### CentOS, RHEL, and derivatives:
 
-If you don't have **git** installed already, run `# yum -y install git`
+If you don't have **git** installed already, run `yum -y install git` as root.
 
 ---
 
@@ -39,19 +50,19 @@ If you don't have **git** installed already, run `# yum -y install git`
 
 #### Clone via ssh:
 
-`$ git clone user@host-or-ip:path/to/repository.git`
+`git clone user@host-or-ip:path/to/repository.git`
 
 #### Clone via https:
 
-`$ git clone https://host-or-ip/path/to/repository.git`
+`git clone https://host-or-ip/path/to/repository.git`
 
 ### Pull changes from origin:
 
-`$ git pull`
+`git pull`
 
 ### Download file from origin:
 
-`$ git checkout .`
+`git checkout .`
 
 > Useful if a file is deleted or overwritten by mistake
 
@@ -59,28 +70,28 @@ If you don't have **git** installed already, run `# yum -y install git`
 
 > Even if a file is added to your local copy of a repository, it won't be added to the git repo automatically. To add it, you need to run this command.
 
-`$ git add filename.ext`
+`git add filename.ext`
 
 ### Commit changes
 
 #### Commit all changes
 
-`$ git commit`
+`git commit`
 
 #### Commit changes to specific files:
 
-`$ git commit file0.ext file1.ext file2.ext`
+`git commit file0.ext file1.ext file2.ext`
 
 #### Specify commit message in command:
 
-`$ git commit -m "Commit message"`
+`git commit -m "Commit message"`
 
 You can combine this with the previous one:
 
-`$ git commit -m "Commit message" file0.ext file1.ext file2.ext`
+`git commit -m "Commit message" file0.ext file1.ext file2.ext`
 
 ### Push local changes to origin:
 
-`$ git push`
+`git push`
 
 > Changes must be committed for this to go through.
