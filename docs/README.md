@@ -5,11 +5,11 @@
 <!-- vim-markdown-toc GFM -->
 
 * [How I maintain this site](#how-i-maintain-this-site)
-    * [Software and Configuration](#software-and-configuration)
-        * [MkDocs](#mkdocs)
-        * [Git](#git)
-        * [Neovim](#neovim)
-            * [Plugins](#plugins)
+  * [Software and Configuration](#software-and-configuration)
+    * [MkDocs](#mkdocs)
+    * [Git](#git)
+    * [Neovim](#neovim)
+      * [Plugins](#plugins)
 
 <!-- vim-markdown-toc -->
 
@@ -19,7 +19,7 @@ As a Computer Networking and Cybersecurity student at Champlain College, I had t
 
 I write the documentation in Markdown, and then generate the site contents using [MkDocs](https://www.mkdocs.org/).
 
-I maintain it from 2 systems (`array-ctrl`, a System76 laptop running Pop!_OS 22.04, and `array-lenny`, a midrange Lenovo-era Thinkpad running Debian GNU/Linux Bullseye), and the only difference in my setup on each of them is the vim color scheme used.
+I maintain it `array-lenny`, a midrange Lenovo-era Thinkpad running Debian GNU/Linux Bookworm.
 
 ### Software and Configuration
 
@@ -61,8 +61,7 @@ I use the following plugins for Neovim (maintained with [vim-plug](https://githu
   * [godlygeek/tabular](https://github.com/godlygeek/tabular/) - used by plasticboy/vim-markdown for some extra functionality
 * [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive/) - git integration that's "so good, it should be illegal!"
 * [tpope/vim-commentary](https://github.com/tpope/vim-commentary/) - comment or uncomment lines in bulk
-* [xero/sourcerer.vim](https://github.com/xero/sourcerer.vim/) - A dark color scheme that I find readable and easy on the eyes. I use it on `array-lenny`
-* [tomasiser/vim-code-dark](https://github.com/tomasiser/vim-code-dark/) - A port of VSCode's Dark+ colorscheme for Neo/vim, which I use on `array-ctrl`
+* [xero/sourcerer.vim](https://github.com/xero/sourcerer.vim/) - A dark color scheme that I find readable and easy on the eyes, particularly in darker environments.
 * [preservim/nerdtree](https://github.com/preservim/nerdtree/) - File tree sidebar for vim
   * [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin/) - git integration for NERDTree
   * [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons/) - Uses "[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)" to provide pseudo-icons for files in NERDTree
