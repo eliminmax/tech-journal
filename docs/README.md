@@ -2,7 +2,7 @@
 
 ## Contents
 
-<!-- vim-markdown-toc GFM -->
+<!-- vim-markdown-toc GitLab -->
 
 * [How I maintain this site](#how-i-maintain-this-site)
   * [Software and Configuration](#software-and-configuration)
