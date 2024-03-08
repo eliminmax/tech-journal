@@ -18,15 +18,15 @@ Setup on VyOS is simple. All you need to do is [enter configuration mode](../VyO
 For the sake of example, I'm assuming `router0` and `router1` are both fully configured, with the following interfaces and addresses:
 
 
-router  | eth0 DMZ, /24 | eth1 LAN, /20 | eth2 MGMT, /27
---------|---------------|---------------|---------------
-router0 | 10.20.2.201   | 10.0.5.2      | 10.200.0.2
-router1 | 10.20.2.202   | 10.0.5.3      | 10.200.0.3
+| router  | eth0 DMZ, /24 | eth1 LAN, /20 | eth2 MGMT, /27 |
+|---------|---------------|---------------|----------------|
+| router0 | 10.20.2.201   | 10.0.5.2      | 10.200.0.2     |
+| router1 | 10.20.2.202   | 10.0.5.3      | 10.200.0.3     |
 
 I will set up the following 3 VRRP addresses
-vrid 10, DMZ, /24 | vrid 20, LAN, /20 | vrd 30, MGMT, /27
-------------------|-------------------|-------------------
-10.20.2.200       | 10.0.5.1          | 10.200.0.1
+| vrid 10, DMZ, /24 | vrid 20, LAN, /20 | vrd 30, MGMT, /27 |
+|-------------------|-------------------|-------------------|
+| 10.20.2.200       | 10.0.5.1          | 10.200.0.1        |
 
 On router0, run the following in `configure` mode:
 

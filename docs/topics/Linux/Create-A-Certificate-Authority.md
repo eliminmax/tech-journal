@@ -53,14 +53,14 @@ set_var EASYRSA_DIGEST        "sha512"
 
 For the `EASYRSA_REQ_*` values, set them as follows:
 
-variable               | value
------------------------|---------------------------------------------------------
-`EASYRSA_REQ_COUNTRY`  | 2-letter Country Code
-`EASYRSA_REQ_PROVINCE` | Full name of state or province (e.g. California, not CA)
-`EASYRSA_REQ_CITY`     | Name of the city
-`EASYRSA_REQ_ORG`      | Name of the organization
-`EASYRSA_REQ_EMAIL`    | Email address
-`EASYRSA_REQ_OU`       | Organizational Unit
+| variable               | value                                                    |
+|------------------------|----------------------------------------------------------|
+| `EASYRSA_REQ_COUNTRY`  | 2-letter Country Code                                    |
+| `EASYRSA_REQ_PROVINCE` | Full name of state or province (e.g. California, not CA) |
+| `EASYRSA_REQ_CITY`     | Name of the city                                         |
+| `EASYRSA_REQ_ORG`      | Name of the organization                                 |
+| `EASYRSA_REQ_EMAIL`    | Email address                                            |
+| `EASYRSA_REQ_OU`       | Organizational Unit                                      |
 
 3. Build the Certificate Authority
 
