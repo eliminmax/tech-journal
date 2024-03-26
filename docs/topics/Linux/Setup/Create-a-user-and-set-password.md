@@ -11,7 +11,7 @@
 
 ## Create a User
 {% raw %}
-run the following as root, replcing `{{ PLACEHOLDER_VALUES }}` as needed:
+run the following as root, replacing `{{ PLACEHOLDER_VALUES }}` as needed:
 
  `useradd -d {{ HOMEDIR }} -G {{ GROUPS }} -s {{ SHELL }} -m {{ USERNAME }}`
 
@@ -30,5 +30,5 @@ To set the password for the new user, use the `passwd` command.
 
 If you are setting/resetting someone else's password, pass the `-e` flag to make change the password when they log in
 
-`# passwd -e {{ USERNAME }}`
+`passwd -e {{ USERNAME }}`
 {% endraw %}
