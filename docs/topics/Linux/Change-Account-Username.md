@@ -1,3 +1,11 @@
+<!--
+SPDX-FileCopyrightText: 2021 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Change Account Username on Linux
 
 {{ j2_template_note }}
