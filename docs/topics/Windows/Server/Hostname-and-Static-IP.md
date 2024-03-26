@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
+SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
 
 SPDX-License-Identifier: MIT
 -->
