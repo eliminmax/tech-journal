@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020-2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Eli Array Minkoff's Tech Notes
 
 ## Contents
