@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Install and configure Graylog
 
 <!-- vim-markdown-toc GitLab -->

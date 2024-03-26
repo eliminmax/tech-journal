@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Active Directory Administration via Powershell
 
 <!-- vim-markdown-toc GitLab -->

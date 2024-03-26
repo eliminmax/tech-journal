@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Basic how-to for Vi/Vim
 
 > When I first wrote this, I had been using Linux systems for some time, but had found **vi/m** to be quite unintuitive. A few months later, I am using vim with various plugins as my go-to text editor.

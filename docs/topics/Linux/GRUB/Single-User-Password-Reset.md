@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Single-user mode password reset 'hack' with GRUB
 
 ## Brief Technical Explanation

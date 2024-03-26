@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Useful Docker commands
 
 [Official Docker installation instructions for Ubuntu 20.04 LTS](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)

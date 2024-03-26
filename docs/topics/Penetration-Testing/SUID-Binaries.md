@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # SUID Binaries
 
 Typically, a user runs a program on a Unix-like system, it runs with the privileges of the user. If the owner sets the special `SUID` permission bit, however, the program gains the owner's privileges.

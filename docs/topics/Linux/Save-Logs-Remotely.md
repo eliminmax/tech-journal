@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Linux: Save Logs remotely with rsyslog
 
 Set up a server to collect logs from other servers

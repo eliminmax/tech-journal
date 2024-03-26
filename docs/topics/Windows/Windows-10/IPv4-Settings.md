@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Windows 10: IPv4 Settings
 
 To access the IPv4 Settings, do the following as an administrator:

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Amazon EC2: Get Default Windows Password
 
 The process for getting the default Windows password is simple:

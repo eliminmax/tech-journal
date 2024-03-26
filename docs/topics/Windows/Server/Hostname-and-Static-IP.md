@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Configuring the Server using the Server Manager App
 
 0. Open the **Server Manager** app. On the sidebar, click **Local Server**.

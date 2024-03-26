@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Linux: VyOS Router and Firewall
 
 {{ j2_template_note }}

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Networking Infrastructure: Dynamic DNS
 
 <!-- vim-markdown-toc GitLab -->

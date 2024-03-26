@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Active Directory: Windows DHCP Server
 
 0. In Server Manager, add the **DHCP** role to the server you intend to use for DHCP, and add **DHCP Server Tools** feature

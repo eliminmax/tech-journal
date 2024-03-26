@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # DHCP in packet tracer
 
 0. Place a server, and navigate to its `Services` tab.

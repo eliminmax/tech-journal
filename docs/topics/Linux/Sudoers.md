@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Linux Sudoers
 
 The rules for which users/groups can use sudo are typically defined in the file */etc/sudoers*. Typically, Linux distros will have a group which can use `sudo`, but the name of the group is not standardised across distros. Here are common default names for such groups:

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Penetration Testing: Passive Recon
 
 The following tools and resources can be valuable for passive recon:

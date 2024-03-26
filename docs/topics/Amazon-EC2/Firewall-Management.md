@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Amazon EC2 Firewall Management
 
 ## Unblock an in-bound port

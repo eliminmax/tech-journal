@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # CentOS: Installing Apache
 
 To set up Apache, follow these simple steps (all commands require root privileges):

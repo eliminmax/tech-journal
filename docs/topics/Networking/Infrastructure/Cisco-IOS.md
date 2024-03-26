@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2021 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Cisco IOS
 
 Cisco had the name first. It's the family of operating systems running on their routers and switches.

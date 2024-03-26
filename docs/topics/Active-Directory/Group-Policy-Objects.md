@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Creating and Configuring Group Policy Objects
 
 > This is made for Windows Server 2019 Standard Edition version 1809, and I can not guarantee it works on any other version of Windows Server.

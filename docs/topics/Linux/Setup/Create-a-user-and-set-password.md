@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Linux User Setup
 
 {{ j2_template_note }}

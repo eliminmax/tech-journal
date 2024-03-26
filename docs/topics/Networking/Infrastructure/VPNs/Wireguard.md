@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Wireguard VPN Setup and Configuration
 
 Wireguard is a VPN protocol that was originally made for Linux, and it has support built into the Linux kernel.

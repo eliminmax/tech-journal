@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # CentOS: Set Up DHCP Service
 
 To set up the DHCP service on CentOS, do the following:

@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Windows Server - Time
 
 ## Configure NTP in cmd.exe:

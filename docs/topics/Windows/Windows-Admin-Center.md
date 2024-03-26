@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Windows Admin Center
 
 Download the installer from [the official site](https://www.microsoft.com/en-us/evalcenter/download-windows-admin-center) and run it.

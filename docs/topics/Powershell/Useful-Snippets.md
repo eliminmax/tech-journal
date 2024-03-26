@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Useful PowerShell Snippets
 
 <!-- vim-markdown-toc GitLab -->

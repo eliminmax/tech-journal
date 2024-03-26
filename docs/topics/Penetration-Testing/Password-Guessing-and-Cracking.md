@@ -1,3 +1,9 @@
+<!--
+SPDX-FileCopyrightText: 2022 - 2023 Eli Array Minkoff
+
+SPDX-License-Identifier: MIT
+-->
+
 # Password Guessing and Cracking - Tools and techniques
 
 <!-- vim-markdown-toc GitLab -->
