@@ -55,7 +55,7 @@ curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo dd
 
 # Register the Microsoft Product feed
 sudo dd of=/etc/apt/sources.list.d/microsoft.list <<EOF
-https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main
+deb [arch=$(dpkg --architecture) signed-by=/etc/apt/keyrings/microsoft.gpg] https://packages.microsoft.com/repos/microsoft-debian-bullseye-prod bullseye main
 EOF
 
 # Install PowerShell
