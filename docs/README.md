@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Eli Array Minkoff's Tech Notes

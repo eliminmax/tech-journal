@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Linux: Join Active Directory

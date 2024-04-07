@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2022 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Windows Server - Time

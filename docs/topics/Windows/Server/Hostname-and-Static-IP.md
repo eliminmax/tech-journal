@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Configuring the Server using the Server Manager App

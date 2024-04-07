@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 - 2023 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Active Directory: Windows DHCP Server

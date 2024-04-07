@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 - 2022 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Windows 10: IPv4 Settings

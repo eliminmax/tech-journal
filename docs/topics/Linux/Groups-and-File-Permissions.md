@@ -1,7 +1,7 @@
 <!--
 SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
 
-SPDX-License-Identifier: MIT
+SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Linux Groups and File Permissions
@@ -10,8 +10,8 @@ SPDX-License-Identifier: MIT
 
 * [Creating and modifying groups](#creating-and-modifying-groups)
   * [groupadd](#groupadd)
-  * [usermod -a -G](#usermod--a--g)
-  * [gpasswd -d](#gpasswd--d)
+  * [usermod -a -G](#usermod-a-g)
+  * [gpasswd -d](#gpasswd-d)
 * [Changing file ownership](#changing-file-ownership)
   * [chown](#chown)
 * [File permissions](#file-permissions)
