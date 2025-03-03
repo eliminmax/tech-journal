@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2020 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -41,6 +41,7 @@ The `MkDocs` configuration file ('`mkdocs.yml`') contents are as follows:
 
 MkDocs is installed into a `pipx`-managed venv, with the following extra packages injected, though not all are used:
 
+* `mkdocs-material`
 * `markdown-callouts`
 * `mdx-truly-sane-lists`
 * `mkdocs-autorefs`

@@ -1,8 +1,14 @@
-# SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+# SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 #
 # SPDX-License-Identifier: CC0-1.0
 
 site_name: Eli Array Minkoff's Tech Docs
+site_url: 'https://tech-docs.earrayminkoff.tech'
+
+theme:
+  name: material
+
+copyright: 'Copyright &copy; 2020 - 2025 Eli Array Minkoff. Unless otherwise noted, all original content is available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>'
 
 plugins:
   - search
