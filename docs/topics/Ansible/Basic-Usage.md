@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -32,7 +32,7 @@ At its most basic, an inventory file contains a list of hostnames, with one per 
 
 You can also create host groups by listing them under a group name specified within square brackets.
 
-You can also set per-host or per-group variables that can be referenced in Jinja2 templates (see [below](#templates)). Some variables, like `ansible_user`, are used to change ansible's default behavior. In the following example, Ansible will attempt to connect to servers listed under `[groupa]` as `ansible_setup_user`, while it will attempt to connect to servers listed under `[groupb]` as `administator`
+You can also set per-host or per-group variables that can be referenced in Jinja2 templates (see [below](#templating)). Some variables, like `ansible_user`, are used to change ansible's default behavior. In the following example, Ansible will attempt to connect to servers listed under `[groupa]` as `ansible_setup_user`, while it will attempt to connect to servers listed under `[groupb]` as `administator`
 
 ```conf
 [groupa]
