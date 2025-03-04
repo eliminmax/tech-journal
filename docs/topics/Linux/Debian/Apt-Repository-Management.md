@@ -10,12 +10,12 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 On this page, I use the terminology preferred by the Debian project, but some terms might be confusing, so I'm going to briefly define them.
 
-* "non-free": software that violates the Debian Free Software Guidelines - in other words, proprietary
+* "non-free": software that violates the Debian Free Software Guidelines - in other words, proprietary software, regardless of whether it costs money.
 * "contrib": software packages that do not contain non-free components, but depend on external non-free components.
 
 ## Adding repositories
 
-Typically, to add a repository, you need to add a configuration file and a GPG key. For the latter, online tutorials often instruct users to use the deprecated and insecure `apt-key` tool, which is not a good idea, for several reasons. The main issue is that the key is added to the **/etc/apt/trusted.gpg.d** directory, which allows them to sign for packages on any repository. Following the [princibal of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), it would be better to only allow it to sign for packages on the specific repositories that need it. There are a few ways to go about this, detailed below.
+Typically, to add a repository, you need to add a configuration file and a GPG key. For the latter, online tutorials often instruct users to use the deprecated and insecure `apt-key` tool, which is not a good idea, for several reasons. The main issue is that the key is added to the **/etc/apt/trusted.gpg.d** directory, which allows them to sign for packages on any repository. Following the [principal of least privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege), it would be better to only allow it to sign for packages on the specific repositories that need it. There are a few ways to go about this, detailed below.
 
 Note that almost all commands on this page require root-level permissions to run, so unless otherwise noted, assume they need to be run as root. This can be done with `sudo`.
 
@@ -158,6 +158,7 @@ Components: ${components}
 ```
 
 The appropriate values can be determined as followed:
+
 * `${dpkg_architectures}`: the architectures supported in the repository. If not specified in the original instructions, omit the entire `arch=${dpkg_architectures} ` part of the **.list** format template. For the **.list** format, this list is comma-separated, while for the **.sources** format, this list is space-separated.
 * `${path_to_signing_key}`: this is the path you saved the key to in the previous step
 * `${repo_uri}`: The URI of the repository. Copy from the original instructions.
