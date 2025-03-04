@@ -16,8 +16,6 @@ Sometimes, sysadmins will set the `SETUID` bit on programs that may not need it.
 
 In one case, the `beep` command, which causes the CPU's speaker to beep, had a buffer overflow bug, which, if it had the `SETUID` bit set, could be used to gain root access. Why would the `SETUID` bit ever be set on a program like that? Because it needs to be able to write to the PC speaker device file, and the docs encouraged setting the `SETUID` bit. They don't anymore, and, in fact, on modern Debian systems, `beep` refuses to work if run with `sudo` or with the `SETUID` bit set.
 
-See the (hilarious) [website](https://holeybeep.ninja/) for more info on that mess.
-
 Anyway, to find all SETUID binaries on the root filesystem, run the following:
 
 ```sh
