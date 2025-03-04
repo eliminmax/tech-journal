@@ -89,7 +89,7 @@ The initial implementation for both used instructions that I did not realize wer
 
 ### January - February 2023: Remaining architectures
 
-In January through early February I completed support for the remaining Debian Bullseye architectures, starting with `arm64`, then going to `ppc64el`, then `s390x`, and finally `mipsel` and `mips64el`. At some point in this period, I switched from generating the encodings for the instructions I needed to use with `rasm2`, then hand-typing them in a hex editor, to looking into how the instructions were encoded, and figuring it out by hand, using `rasm2` to check my work. The MIPS implementations were the easiest, not just because I did them last, but because MIPS is a much easier architecture to understand.
+In January through early February I completed support for the remaining Debian Bullseye architectures, starting with `arm64`, then going to `ppc64el`, then `s390x`, and finally `mipsel` and `mips64el`. At some point in this period, I switched from generating the encodings for the instructions I needed to use with `rasm2`, then hand-typing them in a hex editor, to looking into how the instructions were encoded, and figuring it out by hand, using `rasm2` to check my work. The MIPS implementations were the easiest, not just because I did them last, but because MIPS is a much easier architecture to understand. With the final target architecture added, I believed that my work on the binaries themselves was done, and I tagged the git repository as `v1.0.0`.
 
 ### April - May 2023: Presentation
 
@@ -122,3 +122,11 @@ I then tagged the repository as `v2.0.0`, and decided that my work on the projec
 ### March 2024 - April 2024: Minor tweaks to presentation script
 
 While I considered work on the actual binaries to be more-or-less complete, I continued to tweak the `presentation.sh` script, making it check an environment variable to get it to explicitly use `qemu-user` programs instead of relying on `binfmt_misc` to execute foregin binaries, and use the standard `\033` instead of `\e` when running printf commands, to try to make it work more portably - mainly because I wanted to run it in the Termux command-line environment for Android. It turns out that not all of the needed `qemu-user` binaries are available anyway, but at least I tried.
+
+### February 2025
+
+I discovered that the sequence `1b 63` (the escape character, followed by the character `c`), can replace the first 2 escape sequences. By switching to that sequence, I was able to cut all of the binaries down by 4 bytes.
+
+I then reworked the architecture-specific READMEs to reflect that, and fixed a few small issues with the READMEs I noticed in the process.
+
+I tagged the repository as `v3.0.0`. Because I thought that the binaries were complete in February 2023, but I went back to improve them, then I again thought that they were complete in March of 2024, I decided not to declare the project complete.
