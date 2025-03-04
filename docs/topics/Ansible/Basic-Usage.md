@@ -8,22 +8,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 {{ j2_template_note }}
 
-<!-- vim-markdown-toc GitLab -->
-
-* [Basic Usage](#basic-usage)
-  * [Set up an inventory file](#set-up-an-inventory-file)
-  * [Run a command on all hosts in inventory](#run-a-command-on-all-hosts-in-inventory)
-  * [Run a module on all hosts in inventory](#run-a-module-on-all-hosts-in-inventory)
-  * [Group Headers](#group-headers)
-* [Playbooks](#playbooks)
-  * [Running an Ansible Playbook](#running-an-ansible-playbook)
-  * [Templating](#templating)
-  * [Conditionals](#conditionals)
-* [Galaxy](#galaxy)
-  * [Installing Roles](#installing-roles)
-
-<!-- vim-markdown-toc -->
-
 ## Basic Usage
 
 ### Set up an inventory file

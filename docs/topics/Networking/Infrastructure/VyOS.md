@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,28 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Linux: VyOS Router and Firewall
 
 {{ j2_template_note }}
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Configuration](#configuration)
-  * [Entering Configuration Mode](#entering-configuration-mode)
-  * [Save Configuration Changes](#save-configuration-changes)
-  * [Basic system configuration](#basic-system-configuration)
-    * [Set hostname](#set-hostname)
-  * [Change password for user](#change-password-for-user)
-  * [Configure SSH to use Key-based Authentication](#configure-ssh-to-use-key-based-authentication)
-    * [The VyOS way](#the-vyos-way)
-  * [Remote Syslog](#remote-syslog)
-  * [Routing](#routing)
-  * [Update VyOS (nightly)](#update-vyos-nightly)
-  * [Firewall Management](#firewall-management)
-    * [Define zones for interfaces](#define-zones-for-interfaces)
-    * [Define Firewalls](#define-firewalls)
-  * [Router Information Protocol (RIP)](#router-information-protocol-rip)
-  * [Export/Import Configuration](#export-import-configuration)
-  * [Port Forwarding](#port-forwarding)
-
-<!-- vim-markdown-toc -->
 
 ## Configuration
 

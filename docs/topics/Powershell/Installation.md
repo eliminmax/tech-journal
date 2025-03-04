@@ -1,18 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Powershell Installation
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Windows](#windows)
-* [Linux](#linux)
-  * [Debian 11 (Bullseye)](#debian-11-bullseye)
-
-<!-- vim-markdown-toc -->
 
 ## Windows
 

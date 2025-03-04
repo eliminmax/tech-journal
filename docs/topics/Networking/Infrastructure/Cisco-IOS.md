@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,26 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Cisco IOS
 
 Cisco had the name first. It's the family of operating systems running on their routers and switches.
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Gain privileged access](#gain-privileged-access)
-* [Enter configuration mode](#enter-configuration-mode)
-* [Create VLAN](#create-vlan)
-* [Edit a range of interfaces](#edit-a-range-of-interfaces)
-* [Configure an access port](#configure-an-access-port)
-* [Configure a trunk port](#configure-a-trunk-port)
-* [Enable Routing on a Multi Layer Switch](#enable-routing-on-a-multi-layer-switch)
-* [Enable and Configure OSPF](#enable-and-configure-ospf)
-* [Static NAT](#static-nat)
-* [Port Address Translation](#port-address-translation)
-* [BGP](#bgp)
-  * [Set up communication](#set-up-communication)
-    * [ON 1234](#on-1234)
-    * [ON 1111](#on-1111)
-  * [Advertise a network](#advertise-a-network)
-
-<!-- vim-markdown-toc -->
 
 NOTE: All listed commands begin with a prompt. The prompt is not actually part of the command, and should not be typed out. All prompts end with `#` or `>`. The former indicates privileged access. In more specific modes, the mode will be listed between the device name and the prompt end (e.g. `SW0(config)#`)
 

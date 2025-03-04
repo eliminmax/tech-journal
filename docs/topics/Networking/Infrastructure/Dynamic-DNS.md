@@ -1,19 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Networking Infrastructure: Dynamic DNS
-
-<!-- vim-markdown-toc GitLab -->
-
-* [DuckDNS](#duckdns)
-* [YDNS (NOT RECOMMENDED)](#ydns-not-recommended)
-    * [Linux](#linux)
-    * [Windows](#windows)
-
-<!-- vim-markdown-toc -->
 
 Dynamic DNS (a.k.a. DDNS) services automatically update DNS records whenever a device's public IP changes, so that there is a consistent way to access a device which might not have a persistent public IP. There are various DDNS providers out there, both free and paid. When setting up DDNS on my RHEL EC2 instance, I found the free DDNS provider YDNS.io to be quite easy to use, but I've since switched to DuckDNS, because it sets all subdomains of the domain automatically.
 

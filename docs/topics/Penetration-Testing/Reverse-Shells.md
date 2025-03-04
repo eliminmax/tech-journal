@@ -1,21 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Reverse Shells
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Reverse Shells](#reverse-shells)
-  * [Simple Socket Reverse Shells](#simple-socket-reverse-shells)
-    * [Attacker Side](#attacker-side)
-    * [Target Side](#target-side)
-  * [PHP reverse shells](#php-reverse-shells)
-  * [Weevely](#weevely)
-
-<!-- vim-markdown-toc -->
 
 ## Reverse Shells
 

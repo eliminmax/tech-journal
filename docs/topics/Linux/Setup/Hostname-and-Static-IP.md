@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,20 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Linux Setup: Hostname and Static IP
 
 {{ j2_template_note }}
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Set Hostname](#set-hostname)
-  * [Systemd-based distros](#systemd-based-distros)
-  * [Generic method](#generic-method)
-* [Configure Static IP](#configure-static-ip)
-  * [CentOS 7](#centos-7)
-  * [Ubuntu Netplan](#ubuntu-netplan)
-    * [FOR ETHERNET CONNECTIONS:](#for-ethernet-connections)
-    * [FOR WIFI NETWORKS:](#for-wifi-networks)
-  * [NetworkManager with nmcli](#networkmanager-with-nmcli)
-
-<!-- vim-markdown-toc -->
 
 ## Set Hostname
 

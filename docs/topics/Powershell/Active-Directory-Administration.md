@@ -1,27 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Active Directory Administration via Powershell
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Install and Configure Domain Controller and DNS Server](#install-and-configure-domain-controller-and-dns-server)
-  * [Set up AD DS Forest](#set-up-ad-ds-forest)
-  * [Add DNS Records](#add-dns-records)
-  * [Print DNS Records](#print-dns-records)
-* [DHCP](#dhcp)
-* [Organizational Units](#organizational-units)
-  * [Create an Organizational Unit](#create-an-organizational-unit)
-  * [Delete an Organizational Unit](#delete-an-organizational-unit)
-  * [Move an Object into an Organizational Unit](#move-an-object-into-an-organizational-unit)
-* [Miscellaneous](#miscellaneous)
-  * [Enable Remote Management](#enable-remote-management)
-  * [Parsing Event Logs](#parsing-event-logs)
-
-<!-- vim-markdown-toc -->
 
 ## Install and Configure Domain Controller and DNS Server
 

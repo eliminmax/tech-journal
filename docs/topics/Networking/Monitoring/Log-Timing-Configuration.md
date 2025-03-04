@@ -1,19 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Logging Configuration on various systems
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Linux/Unix](#linux-unix)
-  * [Rsyslog](#rsyslog)
-    * [Send Logs to Remote Logging Server](#send-logs-to-remote-logging-server)
-    * [Make logs include UTC timestamp](#make-logs-include-utc-timestamp)
-
-<!-- vim-markdown-toc -->
 
 ## Linux/Unix
 

@@ -1,19 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # GlusterFS
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Setup](#setup)
-  * [Installation](#installation)
-  * [Configuring a GlusterFS Volume](#configuring-a-glusterfs-volume)
-* [Mounting a GlusterFS Volume](#mounting-a-glusterfs-volume)
-
-<!-- vim-markdown-toc -->
 
 GlusterFS is a distributed filesystem, which allows you to split a volume across multiple hosts, or replicate data to multiple hosts.
 

@@ -1,20 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Linux: Setup: Firewalls
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Firewalld](#firewalld)
-  * [Show active firewall config](#show-active-firewall-config)
-  * [Add a port](#add-a-port)
-  * [Add a service](#add-a-service)
-  * [Add a rich rule](#add-a-rich-rule)
-
-<!-- vim-markdown-toc -->
 
 ## Firewalld
 

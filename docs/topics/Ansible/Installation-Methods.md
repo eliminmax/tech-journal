@@ -1,26 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Ansible: Installation Methods
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Install Ansible with System Package Manager](#install-ansible-with-system-package-manager)
-  * [Red Hat Family](#red-hat-family)
-  * [Debian Family](#debian-family)
-    * [Install from PPA](#install-from-ppa)
-* [Installation with pip and Related Tools](#installation-with-pip-and-related-tools)
-  * [pip](#pip)
-  * [pipx](#pipx)
-    * [Install pipx with System Package Manager](#install-pipx-with-system-package-manager)
-    * [Install pipx with pip](#install-pipx-with-pip)
-    * [Install pipx with pipx-in-pipx](#install-pipx-with-pipx-in-pipx)
-  * [spipx](#spipx)
-
-<!-- vim-markdown-toc -->
 
 ## Install Ansible with System Package Manager
 

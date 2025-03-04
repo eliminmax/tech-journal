@@ -1,24 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Linux: Create a Certificate Authority
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Easy-RSA](#easy-rsa)
-  * [Rocky Linux 8](#rocky-linux-8)
-    * [Installation/Setup](#installationsetup)
-    * [Signing Certificates](#signing-certificates)
-* [Add your Certificate Authority to the system trust](#add-your-certificate-authority-to-the-system-trust)
-  * [Debian and derivatives:](#debian-and-derivatives)
-  * [RHEL and derivatives:](#rhel-and-derivatives)
-  * [Windows](#windows)
-  * [Note about Firefox](#note-about-firefox)
-
-<!-- vim-markdown-toc -->
 
 ## Easy-RSA
 

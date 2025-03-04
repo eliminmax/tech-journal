@@ -1,27 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Password Guessing and Cracking - Tools and techniques
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Password Guessing](#password-guessing)
-  * [CeWL](#cewl)
-  * [RSMangler](#rsmangler)
-  * [Hydra](#hydra)
-* [Password Cracking](#password-cracking)
-  * [/etc/shadow](#etcshadow)
-    * [Getting password hashes from /etc/shadow](#getting-password-hashes-from-etcshadow)
-      * [Explanation](#explanation)
-* [Password Cracking](#password-cracking-1)
-  * [unshadow](#unshadow)
-  * [John the Ripper](#john-the-ripper)
-  * [Hashcat](#hashcat)
-
-<!-- vim-markdown-toc -->
 
 ## Password Guessing
 

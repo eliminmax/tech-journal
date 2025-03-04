@@ -1,27 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # SSH
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Security](#security)
-  * [Block Root Login](#block-root-login)
-  * [Set Up Key-based Authentication](#set-up-key-based-authentication)
-    * [With OpenSSH Client](#with-openssh-client)
-    * [With PuTTY](#with-putty)
-  * [How to use SSH-Agent](#how-to-use-ssh-agent)
-* [SCP](#scp)
-  * [Copy files to/from machines with SCP](#copy-files-tofrom-machines-with-scp)
-  * [Dealing with known_hosts file](#dealing-with-known_hosts-file)
-    * [Option 1: Delete the offending line](#option-1-delete-the-offending-line)
-    * [Option 2: Empty or delete the known_hosts file](#option-2-empty-or-delete-the-known_hosts-file)
-  * [Edit remote files with Vim](#edit-remote-files-with-vim)
-
-<!-- vim-markdown-toc -->
 
 This is a page documenting the use of **OpenSSH**, the *de facto* standard system for remote access to Linux/Unix servers.
 

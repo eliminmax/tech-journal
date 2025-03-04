@@ -1,17 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # VRRP
-
-<!-- vim-markdown-toc GitLab -->
-
-* [VyOS](#vyos)
-* [keepalived](#keepalived)
-
-<!-- vim-markdown-toc -->
 
 VRRP, the Virtual Router Redundancy Protocol, is a protocol designed to coordinate between multiple routers, to enable failover should one go down. A VRRP setup essentially creates a fake router with its own IP address, and different actual routers can act as the fake router. Each actual router involved must have a different priority number configured, and the highest-priority router is the one that acts as the virtual router. If it goes down, the next-highest steps in, allowing for smooth fail-over.
 
@@ -22,7 +15,6 @@ While designed for use by routers, there is no reason it can't be used for other
 Setup on VyOS is simple. All you need to do is [enter configuration mode](../VyOS.md#entering-configuration-mode), run the configuration commands listed below, then [commit and save the changes](../VyOS.md#save-configuration-changes).
 
 For the sake of example, I'm assuming `router0` and `router1` are both fully configured, with the following interfaces and addresses:
-
 
 | router  | eth0 DMZ, /24 | eth1 LAN, /20 | eth2 MGMT, /27 |
 |---------|---------------|---------------|----------------|

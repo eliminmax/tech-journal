@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,15 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Host Discovery
 
 {{ j2_template_note }}
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Methods](#methods)
-  * [`ping`](#ping)
-  * [`fping`](#fping)
-  * [`nmap`](#nmap)
-
-<!-- vim-markdown-toc -->
 
 ## Methods
 

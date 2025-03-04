@@ -6,25 +6,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 # Linux Groups and File Permissions
 
-<!-- vim-markdown-toc GitLab -->
-
-* [Creating and modifying groups](#creating-and-modifying-groups)
-  * [Creating groups](#creating-groups)
-  * [Adding users to groups](#adding-users-to-groups)
-  * [Removing users from groups](#removing-users-from-groups)
-* [Switching primary group](#switching-primary-group)
-* [File Permissions](#file-permissions)
-  * [Changing owner and/or group](#changing-owner-andor-group)
-  * [File mode](#file-mode)
-    * [Examples](#examples)
-    * [Changing file mode](#changing-file-mode)
-    * [Special permission bits](#special-permission-bits)
-      * [On Files](#on-files)
-  * [Default permissions](#default-permissions)
-    * [Querying and modifying the umask](#querying-and-modifying-the-umask)
-
-<!-- vim-markdown-toc -->
-
 These commands are important-to-know Linux commands for changing file permissions and managing groups.
 
 ## Creating and modifying groups

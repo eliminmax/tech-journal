@@ -1,31 +1,8 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
-
-# Intro to Git
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Installing Git](#installing-git)
-  * [Debian, Ubuntu, and derivatives:](#debian-ubuntu-and-derivatives)
-  * [CentOS, RHEL, and derivatives:](#centos-rhel-and-derivatives)
-  * [Windows:](#windows)
-* [Basic Git commands](#basic-git-commands)
-  * [Clone a repository:](#clone-a-repository)
-    * [Clone via ssh:](#clone-via-ssh)
-    * [Clone via https:](#clone-via-https)
-  * [Pull changes from origin:](#pull-changes-from-origin)
-  * [Download file from origin:](#download-file-from-origin)
-  * [Add local file to repository](#add-local-file-to-repository)
-  * [Commit changes](#commit-changes)
-    * [Commit all changes](#commit-all-changes)
-    * [Commit changes to specific files:](#commit-changes-to-specific-files)
-    * [Specify commit message in command:](#specify-commit-message-in-command)
-  * [Push local changes to origin:](#push-local-changes-to-origin)
-
-<!-- vim-markdown-toc -->
 
 This page will introduce the most basic uses of the `git` version control system
 

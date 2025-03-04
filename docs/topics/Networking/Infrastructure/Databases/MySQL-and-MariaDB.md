@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,22 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # MySQL and MariaDB
 
 {{ j2_template_note }}
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Note](#note)
-* [Installation and Setup](#installation-and-setup)
-* [The SQL language](#the-sql-language)
-  * [Create a User](#create-a-user)
-  * [Create a Database](#create-a-database)
-  * [Privilege Management](#privilege-management)
-* [Galera Clustering](#galera-clustering)
-  * [Setup](#setup)
-    * [Installation:](#installation)
-    * [Configuration](#configuration)
-    * [Bootstrap](#bootstrap)
-
-<!-- vim-markdown-toc -->
 
 ## Note
 

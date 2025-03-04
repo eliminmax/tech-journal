@@ -1,21 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Useful PowerShell Snippets
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Windows Exclusive](#windows-exclusive)
-  * [Check IP Addresses](#check-ip-addresses)
-  * [Enable RDP](#enable-rdp)
-* [Cross-platform](#cross-platform)
-  * [Filter objects](#filter-objects)
-  * [Install Module](#install-module)
-
-<!-- vim-markdown-toc -->
 
 # Windows Exclusive
 

@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -16,23 +16,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 ```
 
 Minimal binaries to clear the terminal, along with its scrollback buffer - [available here](https://github.com/eliminmax/tiny-clear-elf).
-
-<!-- vim-markdown-toc GitLab -->
-
-* [About this Project](#about-this-project)
-* [Why `clear`, specifically?](#why-clear-specifically)
-* [Timeline](#timeline)
-  * [August 2022: Planning](#august-2022-planning)
-  * [September to October 2022: x86 Implementations](#september-to-october-2022-x86-implementations)
-  * [October - December 2022: Fixes and early ARM](#october-december-2022-fixes-and-early-arm)
-  * [January - February 2023: Remaining architectures](#january-february-2023-remaining-architectures)
-  * [April - May 2023: Presentation](#april-may-2023-presentation)
-  * [July 2023: Cleanup and Scope Update](#july-2023-cleanup-and-scope-update)
-  * [August 2023: Debian Project Changes](#august-2023-debian-project-changes)
-  * [Febuary - March 2024: Version 2.0](#febuary-march-2024-version-20)
-  * [March 2024 - April 2024: Minor tweaks to presentation script](#march-2024-april-2024-minor-tweaks-to-presentation-script)
-
-<!-- vim-markdown-toc -->
 
 ## About this Project
 

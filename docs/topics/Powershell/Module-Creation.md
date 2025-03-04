@@ -1,19 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
-# Powershell - Module Creation
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Set up module](#set-up-module)
-  * [Creating the module file](#creating-the-module-file)
-  * [Creating the Module Manifest](#creating-the-module-manifest)
-  * [Module Path](#module-path)
-
-<!-- vim-markdown-toc -->
+# Powershell Module Creation
 
 ## Set up module
 

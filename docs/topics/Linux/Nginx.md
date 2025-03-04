@@ -1,19 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
-# Linux: nginx
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Install nginx](#install-nginx)
-  * [Debian family](#debian-family)
-  * [RHEL 8 family](#rhel-8-family)
-* [Configure nginx to use HTTPS](#configure-nginx-to-use-https)
-
-<!-- vim-markdown-toc -->
+# nginx
 
 ## Install nginx
 

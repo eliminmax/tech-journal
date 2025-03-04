@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,23 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Wireguard VPN Setup and Configuration
 
 Wireguard is a VPN protocol that was originally made for Linux, and it has support built into the Linux kernel.
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Linux Configuration](#linux-configuration)
-  * [Dependencies](#dependencies)
-  * [Creating a Wireguard interface](#creating-a-wireguard-interface)
-  * [Setting an IP address](#setting-an-ip-address)
-  * [Generating a key pair](#generating-a-key-pair)
-  * [Adding peers](#adding-peers)
-  * [All Together Now](#all-together-now)
-* [Other systems](#other-systems)
-  * [Example: Wireguard connection from Windows to VyOS](#example-wireguard-connection-from-windows-to-vyos)
-    * [On `remote`:](#on-remote)
-    * [On `fw`:](#on-fw)
-    * [Back to `remote`:](#back-to-remote)
-
-<!-- vim-markdown-toc -->
 
 ## Linux Configuration
 

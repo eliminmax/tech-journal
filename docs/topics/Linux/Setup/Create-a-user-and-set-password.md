@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2020 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -7,13 +7,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 # Linux User Setup
 
 {{ j2_template_note }}
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Create a User](#create-a-user)
-* [Set Password](#set-password)
-
-<!-- vim-markdown-toc -->
 
 ## Create a User
 {% raw %}

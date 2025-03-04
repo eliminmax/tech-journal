@@ -1,27 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # APT Repository Management
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Notes on Terminology](#notes-on-terminology)
-* [Adding repositories](#adding-repositories)
-  * [Third-Party Repositories](#third-party-repositories)
-    * [Extrepo](#extrepo)
-      * [Non-Free Software](#non-free-software)
-      * [Example - Installing Visual Studio Code](#example---installing-visual-studio-code)
-    * [Manually Adding a Repository](#manually-adding-a-repository)
-      * [Acquiring GPG key](#acquiring-gpg-key)
-      * [Creating the Repository Configuration File](#creating-the-repository-configuration-file)
-        * [Template for .list format](#template-for-list-format)
-        * [Template for .sources format](#template-for-sources-format)
-      * [Example: Installing PowerShell on Debian Bullseye](#example-installing-powershell-on-debian-bullseye)
-
-<!-- vim-markdown-toc -->
 
 ## Notes on Terminology
 

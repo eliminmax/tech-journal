@@ -1,16 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
-# Powershell: Configuration
-
-<!-- vim-markdown-toc GitLab -->
-
-* [$PROFILE](#profile)
-
-<!-- vim-markdown-toc -->
+# Powershell Configuration
 
 ## $PROFILE
 

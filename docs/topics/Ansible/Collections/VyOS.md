@@ -1,16 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2023 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Ansible: VyOS
-
-<!-- vim-markdown-toc GitLab -->
-
-* [Line by Line configuration](#line-by-line-configuration)
-
-<!-- vim-markdown-toc -->
 
 Ansible has the ability to simplify the configuration of VyOS systems, using a few different techniques.
 

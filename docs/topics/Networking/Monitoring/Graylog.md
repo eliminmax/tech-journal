@@ -1,24 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2022 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2022 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # Install and configure Graylog
-
-<!-- vim-markdown-toc GitLab -->
-
-  * [RHEL 7/8, CentOS 7, AlmaLinux 8, Rocky Linux 8, etc.](#rhel-78-centos-7-almalinux-8-rocky-linux-8-etc)
-    * [Manual Approach](#manual-approach)
-      * [Step 1 - Install Software](#step-1-install-software)
-      * [Step 2 - Configure and Start Services](#step-2-configure-and-start-services)
-      * [Step 3 - Firewall and SELinux Stuff](#step-3-firewall-and-selinux-stuff)
-    * [Automated approach to Steps 1, 2, and 3](#automated-approach-to-steps-1-2-and-3)
-      * [Step 4 - Rsyslog Replacement](#step-4-rsyslog-replacement)
-      * [Step 5 - change rsyslog client settings](#step-5-change-rsyslog-client-settings)
-* [Send Windows EventLogs to Graylog with Sidecar and Winlogbeat](#send-windows-eventlogs-to-graylog-with-sidecar-and-winlogbeat)
-
-<!-- vim-markdown-toc -->
 
 {{ j2_template_note }}
 

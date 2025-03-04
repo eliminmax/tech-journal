@@ -1,18 +1,10 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
 
 # SNMP on various systems
-
-<!-- vim-markdown-toc GitLab -->
-
-* [CentOS Server](#centos-server)
-* [Windows Server (Via AD DS)](#windows-server-via-ad-ds)
-* [pfSense Firewall/Router](#pfsense-firewall-router)
-
-<!-- vim-markdown-toc -->
 
 ## CentOS Server
 
