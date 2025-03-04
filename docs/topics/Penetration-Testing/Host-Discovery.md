@@ -59,7 +59,7 @@ This one's much more aggressive. Using it without permission from the owners of 
 * `-sn`: disable port scan - don't scan for open ports, only list hosts that are up
    * despite being a "ping scan", this does not actually limit itself to ICMP ECHO_REQUEST packets, also sending a TCP SYN to port 443, a TCP ACK to port 80, and a ICMP timestamp requests. *If running as a non-privileged *nix user, it skips the ICMP packets entirely.*
 {% raw %}
-* `-oG {{ file }}`: write output to `{{ file }}`, in a "greppable" (i.e. easy to programatically parse) format
+* `-oG {{ file }}`: write output to `{{ file }}`, in a "greppable" (i.e. easy to programmatically parse) format
    * (special case) `-oG -`: write output to stdout in a "greppable" format
 {% endraw %}
 Using the same ping sweep example as earlier, one approach could be as follows:

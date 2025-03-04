@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 - 2024 Eli Array Minkoff
+SPDX-FileCopyrightText: 2021 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -36,4 +36,4 @@ Allow the user **example** to use **sudo** without a password, but only when run
 
 `example ALL=NOPASSWD: /sbin/reboot, /sbin/halt, /sbin/poweroff`
 
-**WARNING:** Giving limited sudo access to a user can still be dangerous, depending on the commands you give access - this should be considered a convinience, not a security control, unless you ***really*** know what you're doing.
+**WARNING:** Giving limited sudo access to a user can still be dangerous, depending on the commands you give access - this should be considered a convenience, not a security control, unless you ***really*** know what you're doing.

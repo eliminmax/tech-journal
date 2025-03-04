@@ -18,7 +18,7 @@ This is a page documenting the use of **OpenSSH**, the *de facto* standard syste
 
 1. search for the entry `PermitRootLogin`
 
-   * In **Vi**/**Vim**, in Normal mode, type `/PermitRootLogin` to search for it, and type `n` and `N` to cycle through all occurences.
+   * In **Vi**/**Vim**, in Normal mode, type `/PermitRootLogin` to search for it, and type `n` and `N` to cycle through all occurrences.
 
    * If you can't find the entry, add it.
 
@@ -51,7 +51,7 @@ This is a page documenting the use of **OpenSSH**, the *de facto* standard syste
    * ***Start -> All Programs -> PuTTY -> PuTTYgen*** 
 1. Select a key type (2048-bit RSA should be fine) and move the mouse around the window.
 
-2. (Optional, but reccommended): Specify a passphrase
+2. (Optional, but recommended): Specify a passphrase
 
 3. Save both the private and public keys.
 

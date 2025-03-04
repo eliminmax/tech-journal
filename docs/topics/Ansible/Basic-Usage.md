@@ -29,7 +29,7 @@ host1.b.example.com color=blue location=toronto
 ansible_user=ansible_setup_user
 
 [groupb:vars]
-ansible_user=administator
+ansible_user=administrator
 ```
 
 ### Run a command on all hosts in inventory

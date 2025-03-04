@@ -57,7 +57,7 @@ SW0(config)#ip routing
 ```
 
 ### Enable and Configure OSPF
-OSPF requires each router to advertise connected networks to other routers. You can get a router `R0` to advertise the networks `192.168.0.0/23`, `192.168.2.0/24`, and `192.168.3.0/24` to OSPF area 0 with proccess #1 with the following:
+OSPF requires each router to advertise connected networks to other routers. You can get a router `R0` to advertise the networks `192.168.0.0/23`, `192.168.2.0/24`, and `192.168.3.0/24` to OSPF area 0 with process #1 with the following:
 
 ```cisco
 R0(config)#router ospf 1
@@ -106,7 +106,7 @@ R0(config)#ip nat inside source list 1 pool users overload
 
 #### Set up communication
 
-To establish a router on Autonomous System 1234 with the IP address `198.51.100.22` and a rounter on Autonomous System 1111 with the IP address `198.51.100.23` as neigbors, run the following:
+To establish a router on Autonomous System 1234 with the IP address `198.51.100.22` and a rounter on Autonomous System 1111 with the IP address `198.51.100.23` as neighbors, run the following:
 
 ##### ON 1234
 ```cisco

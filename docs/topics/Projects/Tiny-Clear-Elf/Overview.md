@@ -101,9 +101,9 @@ I'd done it. I'd graduated, but now I was stuck. I had some health issues keepin
 
 ### August 2023: Debian Project Changes
 
-On July 24th, 2023, [it was announced that "riscv64 is now an official architecture" for Debian](https://lists.debian.org/debian-riscv/2023/07/msg00053.html). If memory serves, I found out about this in August, and decided to try to support any new architectures in new Debian versions, perferrably before they reach stable status, at least for as long as I remain interested. I had a working riscv64 implementation within a few days of that decision.
+On July 24th, 2023, [it was announced that "riscv64 is now an official architecture" for Debian](https://lists.debian.org/debian-riscv/2023/07/msg00053.html). If memory serves, I found out about this in August, and decided to try to support any new architectures in new Debian versions, preferably before they reach stable status, at least for as long as I remain interested. I had a working riscv64 implementation within a few days of that decision.
 
-### Febuary - March 2024: Version 2.0
+### February - March 2024: Version 2.0
 
 I decided to revisit the existing implementations, and try to save a few bytes here and there. I quickly realized that some of the instructions used in the `armel` version were invalid in some versions of ARM that were supported by Debian as part of `armel`, thus making it an invalid implementation by my own rules.
 
@@ -113,9 +113,9 @@ I also learned that RISC V has an optional architecture extension that adds simi
 
 After that, I looked into `pc`-relative addressing. There's a special CPU register on most architectures called `pc`, which holds the address of the current instruction, but typically can't be interacted with using normal instructions. In the `armhf` version, I'd been using a half-length and full-length instruction together to load a memory address into a register, but it turns out that the `ADR` instruction can be used to add an offset value to the contents of `pc`, saving the result to a register. By switching to the Thumb encoding of that instruction, I save a further 4 bytes. As a bonus, it no longer used instructions which were invalid for Debian's `armel` architecture. While 64-bit ARM does not have Thumb instructions, it does have the `ADR` instruction, and I was similarly able to save 4 bytes by switching to it. I looked at the other architectures, but either they didn't support setting a register to a `pc`-relative value at all, or did not support it in a way that would save me bytes.
 
-While looking into `pc`-relative addressing, I was also looking into various tricks to save on bytes for x86 systems. Because x86 uses variable-length instructions, it was harder to reason about, but it turns out that there are tricks to save bytes while using multible instructions to replace one instruction. It was complex and beyond the scope of this overview, but I was able to save 9 bytes on the `amd64` implementation, and 8 bytes on the `i386` implementation.
+While looking into `pc`-relative addressing, I was also looking into various tricks to save on bytes for x86 systems. Because x86 uses variable-length instructions, it was harder to reason about, but it turns out that there are tricks to save bytes while using multiple instructions to replace one instruction. It was complex and beyond the scope of this overview, but I was able to save 9 bytes on the `amd64` implementation, and 8 bytes on the `i386` implementation.
 
-Lastly, I added some explicity dependency checking to the `presentation.sh` script.
+Lastly, I added some explicitly dependency checking to the `presentation.sh` script.
 
 I then tagged the repository as `v2.0.0`, and decided that my work on the project was done for the time being.
 

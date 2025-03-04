@@ -51,7 +51,7 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
 
-[The Ansible docs](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-debian) include instructions for using the PPA on Debian as well, but I'd highly recommend against that approach, because it uses the depracated `apt-key` command, and it is considered bad practice to use PPAs on Debian - see [Advice For New Users On Not Breaking Their Debian System § Don't make a FrankenDebian](https://wiki.debian.org/DontBreakDebian#Don.27t_make_a_FrankenDebian) on the Debian wiki for an explanation.
+[The Ansible docs](https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-debian) include instructions for using the PPA on Debian as well, but I'd highly recommend against that approach, because it uses the deprecated `apt-key` command, and it is considered bad practice to use PPAs on Debian - see [Advice For New Users On Not Breaking Their Debian System § Don't make a FrankenDebian](https://wiki.debian.org/DontBreakDebian#Don.27t_make_a_FrankenDebian) on the Debian wiki for an explanation.
 
 ## Installation with pip and Related Tools
 
@@ -64,7 +64,7 @@ python3 -m pip install --user ansible
 
 ### pipx
 
-`pipx` is a tool that, much like `pip`, can install programs from the Python Package Index, but unlike `pip`, it installs them into their own isolated venv, to avoid polluting the system Python prefix and avoid depenendency hell.
+`pipx` is a tool that, much like `pip`, can install programs from the Python Package Index, but unlike `pip`, it installs them into their own isolated venv, to avoid polluting the system Python prefix and avoid dependency hell.
 
 ```sh
 pipx install ansible --include-deps
@@ -88,7 +88,7 @@ On Debian Bullsey (stable at time of writing), it is available through the backp
 python3 -m pip install --user pipx
 ```
 
-I'd recommend against this method, as installing as user is a recipie for dependency hell, while installing as root is a recipie for dependency hell that can break your system. See the [pipx-in-pipx](#install-pipx-with-pipx-in-pipx) instructions below for an alternative.
+I'd recommend against this method, as installing as user is a recipe for dependency hell, while installing as root is a recipe for dependency hell that can break your system. See the [pipx-in-pipx](#install-pipx-with-pipx-in-pipx) instructions below for an alternative.
 
 #### Install pipx with pipx-in-pipx
 

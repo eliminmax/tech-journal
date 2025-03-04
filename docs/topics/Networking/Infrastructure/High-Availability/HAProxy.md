@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2023 Eli Array Minkoff
+SPDX-FileCopyrightText: 2023 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -16,7 +16,7 @@ To use HAProxy, you need to set up a configuration file. On Debian and Ubuntu sy
 
 #### MySQL/MariaDB
 
-For my [Redundancy/High Availablity project](https://github.com/eliminmax/cncs-journal/wiki/Working-Notes%3A-SEC440%3A-High-Availability-Project), I had to use HAProxy to proxy requests between 2 Nextcloud servers and a Galera cluster (i.e. a redundant, distributed MySQL/MariaDB database). There were a few extra steps to this - I had to create `haproxy@10.0.6.11` and `haproxy@10.0.6.12` users on the Galera cluster, which allowed `haproxy` to determine which of the servers were alive at any given time. I added `nextcloud-user` database users to the cluster, with the same password and permissions as those on the nextcloud servers themselves, to allow HAProxy to pass on the requests. I then added the following to the `ha1` server's HAProxy configuration, and another entry that was identical save for the name to the `ha2` server's configuration.
+For my [Redundancy/High Availability project](https://github.com/eliminmax/cncs-journal/wiki/Working-Notes%3A-SEC440%3A-High-Availability-Project), I had to use HAProxy to proxy requests between 2 Nextcloud servers and a Galera cluster (i.e. a redundant, distributed MySQL/MariaDB database). There were a few extra steps to this - I had to create `haproxy@10.0.6.11` and `haproxy@10.0.6.12` users on the Galera cluster, which allowed `haproxy` to determine which of the servers were alive at any given time. I added `nextcloud-user` database users to the cluster, with the same password and permissions as those on the nextcloud servers themselves, to allow HAProxy to pass on the requests. I then added the following to the `ha1` server's HAProxy configuration, and another entry that was identical save for the name to the `ha2` server's configuration.
 
 ```conf
 listen ha1_sql

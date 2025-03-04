@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2020 - 2023 Eli Array Minkoff
+SPDX-FileCopyrightText: 2020 - 2025 Eli Array Minkoff
 
 SPDX-License-Identifier: CC-BY-SA-4.0
 -->
@@ -22,7 +22,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Configure a Group Policy Object
 
-1. Within **Server Manager**, click ***Tools*** one the menu br, and select ***Group Policy Mangement*** from the drop-down 
+1. Within **Server Manager**, click ***Tools*** one the menu br, and select ***Group Policy Management*** from the drop-down 
 
 2. Along the sidebar, right click the GPO you want to edit, and select ***Edit...***
 

@@ -12,7 +12,7 @@ Wireguard is a VPN protocol that was originally made for Linux, and it has suppo
 
 ### Dependencies
 
-For the sake of this example, I am assuming that the `ip` command is avialable.
+For the sake of this example, I am assuming that the `ip` command is available.
 On Debian and Ubuntu, it is part of the `iproute2` package.
 
 There are 2 components to Wireguard that must be installed - the kernel-level support and the command-line tools. The former may be compiled in to the Linux kernel already, depending on the build configuration. The latter will probably need to be manually installed.
