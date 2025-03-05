@@ -14,8 +14,6 @@ As a Computer Networking and Cybersecurity student at Champlain College, I had t
 
 I write the documentation in Markdown, and then generate the site contents using [MkDocs](https://www.mkdocs.org/).
 
-I maintain it `array-lenny`, a midrange Lenovo-era Thinkpad running Debian GNU/Linux Bookworm.
-
 ### Software and Configuration
 
 #### MkDocs
