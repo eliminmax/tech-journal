@@ -89,7 +89,7 @@ When setting up the installation, I used the following partitions within the VM:
 You can customize the VM before proceeding, though I'd caution against anything too significant. For example, once I was able to boot into the base system, I did the following:
 
 * Installed my custom "core-system" metapackage - an empty package which depends on utilities I always want installed, built from [this control file](https://github.com/eliminmax/debian-dependency-metapackages/blob/9311e4b98e0b6ac78dd246b237796fd911cff170/eliminmax-core-system/control)
-* [Set up an ssh server](/topics/Utilities/Remote-Access/SSH/), and copied my ssh public IDs to it
+* [Set up an ssh server](../../Utilities/Remote-Access/SSH.md), and copied my ssh public IDs to it
 * installed the arm64 [Tiny Clear ELF](https://github.com/eliminmax/tiny-clear-elf) binary to /usr/local/bin/clear
 * set up the `/etc/bash.bashrc` file with my ["prompt stuff"](https://gist.github.com/eliminmax/197c5f8e9fb41168b16df34ff604c5b6), and uncommented the block setting up bash completion
 ///
