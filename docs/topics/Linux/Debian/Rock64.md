@@ -10,7 +10,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 This guide is written for someone who, like me, is comfortable with Debian, and would rather not use years-old 3rd-party custom builds meant specifically for the Rock64, which may have 3rd-party software and/or configuration out-of-the-box.
 
-I've had trouble installing Debian to my Rock64, as the installer seems to install a broken version of the u-boot bootloader - see [as365n4's forum thread](https://forum.pine64.org/showthread.php?tid=11316&pid=78384). Like as365n4, I decided to try to adapt the more general guide to [installing Devuan or Debian on ARM64 SBCs that are not officially supported](https://www.kulesz.me/post/140-debian-devuan-arm64-install/) by Daniel Kulesz.
+I've had trouble installing Debian to my Rock64, as the installer seems to install a broken version of the u-boot bootloader - see [as365n4's forum thread](https://forum.pine64.org/showthread.php?tid=11316&pid=78384). Like as365n4, I decided to try to adapt the more general guide to [installing Devuan or Debian on ARM64 SBCs that are not officially supported](https://www.kulesz.me/post/140-debian-devuan-arm64-install/) by Daniel Kulesz. as365n4 also has a guide, which is [available here](https://github.com/as365n4/Debian_on_Rock64), though I only used it for [kernel boot parameters](https://github.com/as365n4/Debian_on_Rock64?tab=readme-ov-file#5bootloader-configuration).
 
 ### What you'll need
 
