@@ -8,17 +8,6 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ## Contents
 
-<!-- vim-markdown-toc GitLab -->
-
-* [How I maintain this site](#how-i-maintain-this-site)
-  * [Software and Configuration](#software-and-configuration)
-    * [MkDocs](#mkdocs)
-    * [Git](#git)
-    * [Neovim](#neovim)
-      * [Plugins](#plugins)
-
-<!-- vim-markdown-toc -->
-
 As a Computer Networking and Cybersecurity student at Champlain College, I had to maintain a tech journal in a GitHub wiki, containing both notes on the technologies used and reflections on particular assignments and labs. I no longer want to maintain that wiki, now that my studies are complete, but I found the process of working on technical documentation to be helpful in reinforcing the concepts as I learned them. I am migrating the technical documentation to this self-hosted site, and I intend to continue working on it. The original `cncs-journal` git repository and wiki are archived, but can still be viewed [here](https://github.com/eliminmax/cncs-journal/wiki).
 
 ## How I maintain this site
