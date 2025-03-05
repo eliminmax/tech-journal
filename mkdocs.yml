@@ -17,10 +17,13 @@ plugins:
 markdown_extensions:
   - callouts
   - pymdownx.betterem
+  - pymdownx.inlinehilite
+  - pymdownx.highlight
   - pymdownx.tilde
   - pymdownx.tasklist
   - pymdownx.superfences
   - pymdownx.saneheaders
+  - mdx_truly_sane_lists
 
 extra:
   j2_template_note:

@@ -28,7 +28,7 @@ The `MkDocs` configuration file ('`mkdocs.yml`') contents are as follows:
 {% include 'mkdocs.yml' %}
 ```
 
-MkDocs is installed into a `pipx`-managed venv, with the following extra packages injected, though not all are used:
+MkDocs is installed into a `pipx`-managed venv, with the following extra packages injected:
 
 * `mkdocs-material`
 * `markdown-callouts`
@@ -45,26 +45,4 @@ I use Git for version control for the original Markdown.
 
 #### Neovim
 
-I use [Neovim](https://neovim.io) to write the pages.
-
-##### Plugins
-
-I use the following plugins for Neovim (maintained with [vim-plug](https://github.com/junegunn/vim-plug))
-
-* [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter/) - git change information
-* [mzlogin/vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc/) - generate table of contents
-* [plasticboy/vim-markdown](https://github.com/plasticboy/vim-markdown/) - markdown-specific extras
-  * [godlygeek/tabular](https://github.com/godlygeek/tabular/) - used by plasticboy/vim-markdown for some extra functionality
-* [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive/) - git integration that's "so good, it should be illegal!"
-* [tpope/vim-commentary](https://github.com/tpope/vim-commentary/) - comment or uncomment lines in bulk
-* [xero/sourcerer.vim](https://github.com/xero/sourcerer.vim/) - A dark color scheme that I find readable and easy on the eyes, particularly in darker environments.
-* [preservim/nerdtree](https://github.com/preservim/nerdtree/) - File tree sidebar for vim
-  * [Xuyuanp/nerdtree-git-plugin](https://github.com/Xuyuanp/nerdtree-git-plugin/) - git integration for NERDTree
-  * [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons/) - Uses "[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)" to provide pseudo-icons for files in NERDTree
-  * [jcharum/vim-nerdtree-syntax-highlight](https://github.com/jcharum/vim-nerdtree-syntax-highlight/) - Color coding for files in NERDTree
-* [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi/) - Multi-cursor implementation
-* [HiPhish/jinja.vim](https://github.com/HiPhish/jinja.vim/) - Syntax highlighting for Jinja2 template files
-
-*(this is not an exhaustive list of plugins, and all of these are in use in maintaining this site. Really.)*
-
-Additionally, I use an ever-changing list of syntax highlighting plugins.
+I use [Neovim](https://neovim.io) to write the pages. It has a config that is partially shared with Vim in `.vimrc`, and partially Neovim-specific in `~/.config/init.lua`. Both parts are in [my dotfiles repo](https://github.com/eliminmax/dotfiles).
