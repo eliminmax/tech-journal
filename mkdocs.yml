@@ -7,6 +7,8 @@ site_url: 'https://tech-docs.earrayminkoff.tech'
 
 theme:
   name: material
+  palette:
+    scheme: slate
 
 copyright: 'Copyright &copy; 2020 - 2025 Eli Array Minkoff. Unless otherwise noted, all original content is available under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>'
 
