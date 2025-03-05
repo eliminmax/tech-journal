@@ -17,6 +17,7 @@ plugins:
 markdown_extensions:
   - callouts
   - pymdownx.betterem
+  - pymdownx.blocks.details
   - pymdownx.inlinehilite
   - pymdownx.highlight
   - pymdownx.tilde

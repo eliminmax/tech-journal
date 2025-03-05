@@ -55,18 +55,20 @@ As root, install the `qemu-efi-aarch64`, `qemu-system-arm`, and `virt-manager` p
 
 <!-- The mkdocs markdown renderer doesn't work well with combining Markdown and
 HTML within a details block, so I've manually converted the markdown parts of the following into the HTML mkdocs would have generated for it. -->
-<details><summary>Fixing <code>firewalld</code> issue</summary>
-<p>
-When I tried to provision the new VM, I hit my first snag - the libvirt default network was not running, and when I tried to start it, I saw the following error:</p>
+/// details | Fixing `firewalld` issue
 
-<blockquote><code>Error creating virtual network: internal error: firewalld is set to use the nftables backend, but the required firewalld 'libvirt' zone is missing. Either set the firewalld backend to 'iptables', or ensure that firewalld has a 'libvirt' zone by upgrading firewalld to a version supporting rule priorities (0.7.0+) and/or rebuilding libvirt with --with-firewalld-zone</code></blockquote>
+When I tried to provision the new VM, I hit my first snag - the libvirt default network was not running, and when I tried to start it, I saw the following error:
 
-As pointed out in <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1040783">this Debian bug report</a>, Debian's libvirt package is already built with firewalld support. The solution I went with was to run the following commands (as root):
+> `Error creating virtual network: internal error: firewalld is set to use the nftables backend, but the required firewalld 'libvirt' zone is missing. Either set the firewalld backend to 'iptables', or ensure that firewalld has a 'libvirt' zone by upgrading firewalld to a version supporting rule priorities (0.7.0+) and/or rebuilding libvirt with --with-firewalld-zone`
 
-<pre class="highlight"><code class="language-sh hljs language-bash">firewall-cmd --add-service=libvirt
+As pointed out in [this Debian bug report](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1040783), Debian's libvirt package is already built with firewalld support. The solution I went with was to run the following commands (as root):
+
+```sh
+firewall-cmd --add-service=libvirt
 virsh net-start --network default
-firewall-cmd --reload</code></pre>
-</details>
+firewall-cmd --reload
+```
+///
 
 #### Install Debian in the VM
 
@@ -76,25 +78,21 @@ Kulesz's guide aims to build a generic image, and recommends using simple passwo
 
 When setting up the installation, I used the following partitions within the VM:
 
-***IF USING F2FS:*** *aft
-
 | Size      |  Name    | Use as                        | Mount point | Bootable flag |
 |-----------|----------|-------------------------------|-------------|---------------|
 | 100 M     |          | `EFI System Partition`        |             | `on`          |
 | 500 M     | `boot`   | `Ext4 journaling file system` | `/boot`     | `off`         |
 | remaining | `rootfs` | `Ext4 journaling file system` | `/`         | `off`         |
 
+/// details | **Optional: Customizing the system**
 
-<!-- Once again, inline HTML due to issues with markdown within summary blocks -->
-<details><summary><strong>Optional: Customizing the system</strong></summary>
-<p>You can customize the VM before proceeding, though I'd caution against anything too significant. For example, once I was able to boot into the base system, I did the following:</p>
-<ol>
-<li>Installed my custom &quot;core-system&quot; metapackage - an empty package which depends on utilities I always want installed, built from <a href="https://github.com/eliminmax/debian-dependency-metapackages/blob/9311e4b98e0b6ac78dd246b237796fd911cff170/eliminmax-core-system/control">this control file</a>.</code></li>
-<li><a href="/topics/Utilities/Remote-Access/SSH/">Set up an ssh server</a>, and copied my ssh public IDs to it</li>
-<li>installed the arm64 <a href="https://github.com/eliminmax/tiny-clear-elf">Tiny Clear ELF</a> binary to /usr/local/bin/clear</li>
-<li>set up the <code>/etc/bash.bashrc</code> file with my <a href="https://gist.github.com/eliminmax/197c5f8e9fb41168b16df34ff604c5b6">&quot;prompt stuff&quot;</a>, and uncommented the block setting up bash completion</li>
-</ol>
-</details>
+You can customize the VM before proceeding, though I'd caution against anything too significant. For example, once I was able to boot into the base system, I did the following:
+
+* Installed my custom "core-system" metapackage - an empty package which depends on utilities I always want installed, built from [this control file](https://github.com/eliminmax/debian-dependency-metapackages/blob/9311e4b98e0b6ac78dd246b237796fd911cff170/eliminmax-core-system/control)
+* [Set up an ssh server](/topics/Utilities/Remote-Access/SSH/), and copied my ssh public IDs to it
+* installed the arm64 [Tiny Clear ELF](https://github.com/eliminmax/tiny-clear-elf) binary to /usr/local/bin/clear
+* set up the `/etc/bash.bashrc` file with my ["prompt stuff"](https://gist.github.com/eliminmax/197c5f8e9fb41168b16df34ff604c5b6), and uncommented the block setting up bash completion
+///
 
 #### Preparing the Image
 
@@ -413,10 +411,10 @@ systemctl daemon-reload
 
 The machine ID and SSH host keys were originally from the VM, and should be replaced.
 
-1. Remove the SSH Keys by running `rm -f /etc/ssh/ssh_host_*_key*`
+1. Remove the SSH Keys by running `#!sh rm -f /etc/ssh/ssh_host_*_key*`
 
-2. Regenerate the SSH keys by running `dpkg-reconfigure openssh-server`
+2. Regenerate the SSH keys by running `#!sh dpkg-reconfigure openssh-server`
 
-3. Remove the old machine ID by running `rm -f /etc/machine-id /var/lib/dbus/machine-id`
+3. Remove the old machine ID by running `#!sh rm -f /etc/machine-id /var/lib/dbus/machine-id`
 
 4. Reboot the server. New `machine-id` files will be regenerated.
