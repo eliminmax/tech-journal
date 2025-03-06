@@ -402,7 +402,7 @@ cat >/mnt/rock64/etc/fstab <<EOF
 # <file system>                     <mount point>  <type>  <options>                   <dump>  <pass>
 $(blkid -t LABEL=rootfs --output export | grep ^UUID=)   /       f2fs    noatime,background_gc=off   0       1
 $(blkid -t LABEL=boot --output export | grep ^UUID=)   /boot   ext4    errors=remount-ro           0       2
-$(blkid -t LABEL=swap --output export | grep ^UUID=)   swap    swap    default                     0       0
+$(blkid -t LABEL=swap --output export | grep ^UUID=)   swap    swap    defaults                    0       0
 EOF
 systemctl daemon-reload
 ```
